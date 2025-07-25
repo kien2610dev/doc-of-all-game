@@ -1,0 +1,6 @@
+systemctl restart nginx
+grep -rnw '/data' -e '103.78.0.52'
+
+
+
+grep -rnw '/data' -e 'tháng thẻ'

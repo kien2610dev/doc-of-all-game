@@ -1,0 +1,1 @@
+C:\Users\dangm\AppData\Local\Programs\Python\Python312\python.exe pack.py -e
