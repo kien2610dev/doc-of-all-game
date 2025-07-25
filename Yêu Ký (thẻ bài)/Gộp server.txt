@@ -1,0 +1,20 @@
+update account_master set srv_code = "s1" where srv_code = "s2"
+
+
+update WEB.`ny_log_giftcode` set server_id = 1 WHERE server_id = 2
+
+
+------------------------------------------------------------------------------------------------
+
+mongod -f /usr/local/mongodb/mongodb.conf
+
+mongo -u "abc123" -p "Abc123321123" --authenticationDatabase "admin" --port 27017
+
+use game-s2
+
+let collections = ["friend-aid", "guild", "hero-display", "kv", "mailbox", "master", "name", "play", "rank-adventure", "rank-level", "rank-power", "rank-task-competition", "recent-master", "status"];
+
+collections.forEach(function(coll) { try { print("Processing collection: " + coll); db[coll].aggregate([{ $match: {} }, { $merge: { into: { db: "game-s1", coll: coll } } }]); print("Data transfer successful for collection: " + coll); } catch (e) { print("Error transferring data for collection: " + coll + " - " + e); } });
+
+
+

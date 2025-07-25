@@ -1,0 +1,37 @@
+Tạo máy chủ
+ - Copy 1 máy chủ s1 ra
+ - Đổi tên
+ - Xóa hết log trong "log" và "gameworld/runtime"
+ - Sửa PORT
+   - dbserver/DbServer.lua (4.10.18)
+   - gameworld/GameWorld.lua ( 4.5.14.32.46)
+   - gateway/GateWay.lua  (6.8.16.18)
+ - Sửa tên file
+   - dbserver/dbserver_1
+   - gameworld/gameworld_1
+   - gateway/gateway_qiji_1
+   - Sửa run và stop cho đúng với tên file vừa sửa
+- Sửa xong chép thư mục vào thư mục "Server"
+- Sửa file start.sh và stop.sh
+- Vào Navicat. Bảng "h5/h5_server" và "kf/serverroute" thêm máy chủ mới
+- Tạo 1 bảng mới tên "h5_cq_002". Số cuối chính là "s" cần mở
+- XOng import cái SQL mặc định kia vào
+- Vào "web/game" sửa file "cfg.php", thêm thông tin máy chủ mới vào
+- Xong thì chạy lệnh "./restart.sh" là xong
+Khởi động lại 
+
+từ s21  đổ lên : vào /gameworld/data/actormgr/actormgr.lua
+function getServerNameBySId(serverid)
+	return ServerNameConf[serverid] and "S"..ServerNameConf[serverid].name or "S*"
+end|
+thay * bằng id của server
+
+
+cdChạy server
+
+cd /data/server
+sh start.sh
+
+tắt server：
+cd /data/server
+sh stop.sh

@@ -1,0 +1,99 @@
+cài aapanel
+URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en.sh "$URL";fi;bash install_7.0_en.sh aapanel
+
+vào aapanel:
+bt
+14
+Dùng link, username + password để vào aapanel trên máy tính
+
+cài nginx 1.21 , php 5.6, sql 5.6 
+Upload file zip data và usr lên trên thư mục chính (root dir) 
+giải nén thư mục game: data 
+giải nén :usr
+
+
+mở port ：1:65535
+
+cài vào  url rewwrite:  tên miền cổng 80 , đường dẫn /data/web
+
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+
+tắt tường lửa trong security
+chmod -R 0777 /data
+chmod -R 0777 /usr
+
+tạo database 160.30.44.123 - Sửa sang Ip mới
+sửa ip trong db kf: bảng serverroute, bảng lianfuroute  
+sửa ip trong db h5: h5_server
+sửa thông báo trong db h5: h5_notice
+
+
+sửa những file sau ( ip/ tên miền): 160.30.44.123 - Sửa sang Ip mới hoặc tên miền mới
+api/game.php
+ver/209/entry.min.js
+pass4/js/jssdk/h5sdk.js
+
+sửa giao diện game trong 2 file sau
+131/resource/image/single/background_zycs_bg.jpg
+MU2/api/icon/bg.jpg
+
+
+chạy server : 
+cd /data/server/mu_s1
+./run.sh
+cd /data/server/mu_s99
+./run.sh
+
+
+----------Mở server mới----------
+Tạo máy chủ
+ - Copy 1 máy chủ s1 ra
+ - Đổi tên
+ - Xóa hết log trong "log" và "gameworld/runtime"
+ - Sửa PORT
+   - dbserver/DbServer.lua (4.10.18)
+   - gameworld/GameWorld.lua ( 4.5.14.32.46)
+   - gateway/GateWay.lua  (6.8.16.18)
+ - Sửa tên file
+   - dbserver/dbserver_1
+   - gameworld/gameworld_1
+   - gateway/gateway_qiji_1
+   - Sửa run và stop cho đúng với tên file vừa sửa
+- Sửa xong chép thư mục vào thư mục "Server"
+- Sửa file start.sh và stop.sh
+- Vào Navicat. Bảng "h5/h5_server" và "kf/serverroute" thêm máy chủ mới
+- Tạo 1 bảng mới tên "h5_cq_002". Số cuối chính là "s" cần mở
+- XOng import cái SQL mặc định kia vào
+- Vào "web/game" sửa file "cfg.php", thêm thông tin máy chủ mới vào
+- Xong thì chạy lệnh "./restart.sh" là xong
+Khởi động lại 
+
+từ s21  đổ lên : vào /gameworld/data/actormgr/actormgr.lua
+function getServerNameBySId(serverid)
+	return ServerNameConf[serverid] and "S"..ServerNameConf[serverid].name or "S*"
+end|
+thay * bằng id của server
+
+
+----------Gộp server----------
+
+
+Chạy lệnh trên mysql
+INSERT INTO h5_cq_006.`actors`(accountid, accountname, actorid, actorname, job, sex, status, level, exp, serverindex, createtime, updatetime, lastonlinetime, lastloginip, baggridcount, gold, yuanbao, totalpower, recharge, paid, fbuid, sceneid, totalonline, dailyonline, vip, vip_level, essence, talentvalue, tianti_level, tianti_dan, tianti_win_count, tianti_week_refres, guildid, guildpos, feats, diamond, history_diamond, zhuansheng, pfid, appid, passive_count, skill_data, passive_data) SELECT accountid, accountname, actorid, actorname, job, sex, status, level, exp, serverindex, createtime, updatetime, lastonlinetime, lastloginip, baggridcount, gold, yuanbao, totalpower, recharge, paid, fbuid, sceneid, totalonline, dailyonline, vip, vip_level, essence, talentvalue, tianti_level, tianti_dan, tianti_win_count, tianti_week_refres, guildid, guildpos, feats, diamond, history_diamond, zhuansheng, pfid, appid, passive_count, skill_data, passive_data FROM h5_cq_007.`actors` WHERE 1;
+INSERT INTO h5_cq_006.`actorvariable`(actorid, variable, storedata, cs_variable) SELECT actorid, variable, storedata, cs_variable FROM h5_cq_007.`actorvariable` WHERE 1;
+INSERT INTO h5_cq_006.`friends`(actorid, attention, black, chat, misc, attentionstr, blackstr, chatstr, miscstr) SELECT actorid, attention, black, chat, misc, attentionstr, blackstr, chatstr, miscstr FROM h5_cq_007.`friends` WHERE 1;
+INSERT INTO h5_cq_006.`guildlist`(guildid, guildname, serverindex, variable, variable2, variable3) SELECT guildid, guildname, serverindex, variable, variable2, variable3 FROM h5_cq_007.`guildlist` WHERE 1;
+INSERT INTO h5_cq_006.`items`(uid, actorid, bag_type, id, count, expire_time, attrs) SELECT uid, actorid, bag_type, id, count, expire_time, attrs FROM h5_cq_007.`items` WHERE 1;
+INSERT INTO h5_cq_006.`mails`(uid, actorid, readstatus, sendtime, head, context, award, awardstatus) SELECT uid, actorid, readstatus, sendtime, head, context, award, awardstatus FROM h5_cq_007.`mails` WHERE 1;
+
+Chạy xong chạy lệnh này
+UPDATE h5_cq_004.`actors` SET serverindex = 6 WHERE 1=1;
+
+sửa data h5_server
+sửa trong data_web --> ty_server xóa 1 sv đã gộp đi chỉ để lại sv gộp vào
+UPDATE data_web.`users` SET last_server = 1 WHERE 1=1;
+
+update WEB.`ny_log_giftcode` set server_id = 24 WHERE server_id = 26

@@ -1,0 +1,28 @@
+1. File cấu hình 通天塔.xlsx
+- Sheet 通天塔关卡: sheet này cấu hình các thông tin các tầng của tháp
++ Cột A: Id của tầng (cũng tương ứng với tầng)
++ Cột B: Id của đội hình quái vật
++ Cột C: phần thưởng vượt tầng
++ Cột D: Tiền thưởng vượt ải lần đầu
++ Cột F: Lực chiến khuyến nghị
++ Cột G: Xem trước đội hình quái vật
+
+- Sheet 通天塔通关奖励: Sheet này cấu hình phần thưởng khi vượt mốc tầng
++ Cột A: Mốc tầng vượt ải
++ Cột B: Phần thưởng khi vượt mốc
+
+2. File cấu hình nhóm quái vật 实例.xlsx
+- Sheet 英雄实例: sheet này để cấu hình từng quái vật bên trong mỗi nhóm đội
++ Cột A: Id cấu hình
++ Cột B: Id Hero
++ Cột C: Level
++ Cột D: Tên gọi
++ Cột F: Thông số thuộc tính của quái vật
+
+- Sheet 一方实例: Sheet này dùng để cấu hình nhóm quái vật
++ Cột A: Id nhóm quái vật (tương ứng với Id của file 通天塔.xlsx - Sheet 通天塔关卡 - Cột B)
++ Cột B: Cấu hình quái vật trong nhóm, cấu trúc 
+ví dụ: 401111:1#401112:3#401113:4#401114:6#401115:8 
+401111 là id của quái vật được cấu hình trong file 实例.xlsx - Sheet 英雄实例 - Cột A
+1 là vị trí trong nhóm
++ Cột D: Tên nhóm quái vật

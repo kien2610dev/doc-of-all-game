@@ -1,0 +1,133 @@
+Centos7.9、4H16G
+Mysql5.7、MongoDB4、Php5.6
+systemctl stop firewalld.service
+
+
+
+---------------------------------------------------------
+
+1、安装环境
+
+	yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh
+
+	up file game lên và giải nén: gồm 2 file usr và data
+
+	systemctl stop firewalld
+	systemctl disable firewalld
+	Vào aapanel chọn Security -> Turn off Firewall
+	chmod -R 755 /usr
+	chmod -R 777 /www/wwwroot/
+	chmod -R 777 /data/
+	yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel
+
+	cho vào phần /etc/profile:
+
+	export JAVA_HOME=/usr/local/jdk
+	export JRE_HOME=${JAVA_HOME}/jre
+	export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+	export PATH=${JAVA_HOME}/bin:$PATH
+	export PATH=$PATH:/usr/local/erlang/bin
+	export PATH=$PATH:/usr/local/rabbitmq/sbin
+	export PATH=$PATH:/usr/local/mongodb/bin
+	
+	xong ấn source /etc/profile
+	cd /usr/local
+	tar zxf otp_src_24.2.tar.gz 
+	mkdir -p /usr/local/erlang
+	cd otp_src_24.2
+	./configure --prefix=/usr/local/erlang
+	make && make install
+	
+	cd /usr/local
+	tar xf rabbitmq-server-generic-unix-3.9.14.tar.xz
+	mv rabbitmq_server-3.9.14 rabbitmq
+	source /etc/profile
+	rabbitmq-plugins enable rabbitmq_management
+	rabbitmq-server -detached
+	rabbitmqctl add_user admin Abc123456...a
+	rabbitmqctl set_user_tags admin administrator
+
+
+	rabbitmq-plugins enable rabbitmq_management
+	rabbitmq-server -detached
+	rabbitmqctl add_user admin Abc123456...a
+	rabbitmqctl set_user_tags admin administrator
+
+	cd /usr/local/mongodb
+	mkdir -p /usr/local/mongodb/data/
+	mkdir -p /usr/local/mongodb/logs/	
+	mongod -f /usr/local/mongodb/mongodb.conf
+
+	mongo
+	use admin
+	db.createUser({user:"abc123",pwd:"Abc123321123",roles:["root"]})
+	exit
+
+	103.78.0.52
+	36.50.134.103
+
+
+	Đổi IP các file sau:
+
+	/data/game/console/store/global.conf.json
+	
+	/data/web/www/srv/yzx.out.js
+	/data/web/www/index.js
+	
+	/data/web/game/main/play.php
+	/data/web/www/libs/main3
+	/data/web/api/game/utils.php
+	
+	Thay Ip trong file sql: tcg.sql
+
+Sau đó vào
+http://ip:15672
+
+tk admin mk Abc123456...a
+
+Click vào Admin ấn chọn guest
+Kéo xuống bên dưới ấn nút Delete this user
+
+Sau đó click vào Admin chọn admin
+Sau đó click Set topic permission và click Set permission	
+	
+3、Cài đặt cơ sở dữ liệu
+	
+	Đổi mật khẩu DB thành：9sBJ2C6m3x
+	Import 4 file SQL ：stat、tcg、cdks, WEB
+	
+Khi cài xong, reboot xong thực hiện như bên dưới
+
+4、Bắt đầu trò chơi
+	mongod -f /usr/local/mongodb/mongodb.conf
+	rabbitmq-server -detached
+	cd /data/game && ./start.sh
+	Check game mở chưa bằng cách ấn netstat -nltp
+	Nếu hiện cổng 8001 thì tức game chạy thành công
+	
+5、Triển khai web 
+、
+=================
+Tạo web với port :80 đường dẫn data/web/
+Ấn vào Website --> URL rewrite
+
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+Tạo web với port :88 đường dẫn data/web/web/
+Tạo web với port :81 đường dẫn data/web/www/
+
+36.50.134.103
+			
+
+
+6.Cách xóa hết thông tin hiện tại
+xóa hết thông tin ở account_master
+	reboot
+	mongod -f /usr/local/mongodb/mongodb.conf
+
+	mongo -u "abc123" -p "Abc123321123" --authenticationDatabase "admin"
+	db.adminCommand({ listDatabases: 1 }).databases.forEach(function(database) {
+ 	   db.getSiblingDB(database.name).dropDatabase();
+	});

@@ -1,0 +1,289 @@
+=====================================================================================
+
+     HƯỚNG DẪN CÀI ĐẶT 414J Gaming- YÊU CẦU HỆ ĐIỀU HÀNH CENTOS7.
+ 
+=====================================================================================
+
+
+Đầu tiên cài đặt aapanel:
+
+URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en.sh "$URL";fi;bash install_7.0_en.sh aapanel
+
+-> Nhập y nếu hiện
+
+
+=====================================================================================
+
+Lưu thông tin vào aapanel cài:
+Nginx 1.24
+MySQL 5.6
+PHP-5.6
+Có thể cài linux tool để add ram ảo
+
+=====================================================================================
+
+Mở port: 1-65535
+
+Vào aapanel chọn Security -> Port rule -> Add Port Rule -> dòng ghi 1-65535
+
+=====================================================================================
+
+Tải file server.zip lên thư mục gốc vps
+
+Giải nén nó:
+
+cd /
+unzip server.zip
+
+
+103.77.173.224
+36.50.135.68
+=====================================================================================
+
+Sửa Ip/Domain: kenhgamechina.com về tên miền của bạn
+
+/data/game/console/store/global.conf.json (192.168.1.111 hoặc 103.78.0.52 về ip vps)
+
+/data/web/www/index.js
+
+/data/web/www/libs/795bf-bff72-0d910.js
+
+/data/web/www/libs/e228b-0b904-ac44c.js
+
+/data/web/api/game/utils.php
+
+/data/web/game/main/play.php
+
+
+Nếu muốn chắc thì dùng notepad ++ fins all tìm ip và domain cho chắc nhé
+
+=====================================================================================
+
+Chạy lệnh cấp quyền 777:
+
+chmod -R 777 /data
+
+
+
+=====================================================================================
+
+Tìm etc/profile
+thêm đoạn bên dưới vào dòng cuối
+
+export JAVA_HOME=/usr/local/jdk
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=$PATH:/usr/local/erlang/bin
+export PATH=$PATH:/usr/local/rabbitmq/sbin
+export PATH=$PATH:/usr/local/mongodb/bin
+
+Sau đó chạy lệnh:
+
+source /etc/profile
+
+=====================================================================================
+Tải file zip usr lên vps 
+giải nén
+
+Cấp quyền usr:
+
+chmod -R 755 /usr
+=====================================================================================
+
+Chạy từng lệnh bên dưới:
+
+yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel
+
+cd /usr/local
+tar zxf otp_src_24.2.tar.gz
+
+mkdir -p /usr/local/erlang
+
+cd otp_src_24.2
+./configure --prefix=/usr/local/erlang
+
+make && make install
+
+cd /usr/local
+tar xf rabbitmq-server-generic-unix-3.9.14.tar.xz
+
+mv rabbitmq_server-3.9.14 rabbitmq
+
+source /etc/profile
+
+rabbitmq-plugins enable rabbitmq_management
+
+rabbitmq-server -detached
+
+rabbitmqctl add_user admin passtudat
+
+rabbitmqctl set_user_tags admin administrator
+
+rabbitmqctl list_users
+
+rabbitmqctl change_password admin passtudat
+
+rabbitmqctl add_user admin passtudat
+
+rabbitmqctl change_password admin passtudat
+
+rabbitmqctl set_user_tags admin administrator
+
+=====================================================================================
+
+Sau đó vào
+http://ip:15672
+
+tk admin mk passtudat
+
+Click vào Admin ấn chọn guest
+Kéo xuống bên dưới ấn nút Delete this user
+
+Sau đó click vào Admin chọn admin
+Sau đó click Set topic permission và click Set permission
+
+=====================================================================================
+
+Chạy lệnh cài mongo:
+
+
+	cd /usr/local/mongodb
+	mkdir -p /usr/local/mongodb/data/
+	mkdir -p /usr/local/mongodb/logs/	
+
+
+=====================================================================================
+
+sửa thêm file /usr/local/mongodb/mongodb.conf
+Nếu có rồi thì thôi ko cần làm bước này
+coppy toàn bộ bên dưới dán vào mongodb.conf bên trong nhé (nếu không có thì tạo mongodb.conf rồi dán)
+ở đây mình tạo sẵn mongodb.conf rồi chỉ cần kéo file bỏ vào /usr/local/mongodb/
+
+#--------------------------------------
+
+# 默认27017
+port=27017
+
+#允许远程IP连接
+bind_ip=127.0.0.1
+
+# 数据库文件位置
+dbpath=/usr/local/mongodb/data
+
+# 是否以守护进程方式运行
+fork=true
+
+# 以追加方式写入日志
+logappend=true
+
+# 日志文件位置
+logpath=/usr/local/mongodb/logs/mongodb.log
+
+journal=true
+
+# 启用验证
+auth = true
+
+#------------------------------------------
+
+=====================================================================================
+
+Chạy lệnh bật mongo:
+mongod -f /usr/local/mongodb/mongodb.conf
+
+Sau đó chạy lệnh:
+netstat -nltp
+
+Xem thấy port 27017 lên là done
+
+
+Lệnh tắt mongo:
+mongod --shutdown --dbpath /usr/local/mongodb/data --port 27017
+
+=====================================================================================
+
+mongo
+use admin
+db.createUser({user:"abc123",pwd:"passtudat",roles:["root"]})
+exit
+
+=====================================================================================
+
+Đổi pass databases về: passtudat
+
+Vào aapanel -> Database -> Root password -> passtudat -> Confirm
+
+=====================================================================================
+
+Chạy lệnh remote navicat:
+
+mysql -u root -ppasstudat
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'passtudat' WITH GRANT OPTION;
+FLUSH   PRIVILEGES;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'passtudat' WITH GRANT OPTION;
+FLUSH   PRIVILEGES;
+grant all privileges on *.* to 'root'@'%' identified by 'passtudat';
+quit
+
+Tạo và import sql vào: web.sql | tcg.sql | stat.sql | cdks.sql
+
+Nhớ sửa ip 103.77.214.189 trong tcg.sql trước rồi mới import nhé
+
+=====================================================================================
+
+Sửa ip phần nạp game:
+
+/data/game/game/tcg-game.jar
+(dùng phần mềm recaf giải nén recaf-2.21.13-J8-jar-with-dependencies.zip ra rồi dùng)
+kéo file tcg-game.jar vào phần mềm rồi tìm đường dẫn như bên dưới
+tcg-game.jar(classes)\com\ososx\tcg\game\pay\msg\PayWithTokenMoneyReq.class ( sửa ip dòng 49)
+
+Vào file - addlibrary - tìm đến file lib chọn hết rồi open
+=====================================================================================
+
+Tạo website đầu tiên (cái này là web game)
+
+domain:80
+/data/web
+
+Ấn vào Website --> URL rewrite
+
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+Tạo website thứ 2 (cái này là web landing)
+
+domain:81
+/data/web/www
+
+=====================================================================================
+
+
+
+=====================================================================================
+
+Chạy lệnh bật server:
+
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+
+cd /data/game && ./start.sh
+
+
+
+Lệnh tắt server:
+
+cd /data/game && ./stop.sh
+
+
+Lệnh stop all:
+
+killall -9 java
+kill -9 nid
+
+
+Lệnh check port xem server lên chưa:
+netstat -nltp
+
+Xem có đủ là ok: 25672 4369 15672 27017 10086 9000 5672 7788 9999 4369 12345 10010

@@ -1,0 +1,29 @@
+---------------Sửa phần điểm danh---------------
+1. Config trong server
+- Trong folder: gameserver\s1\data\Checkin\ tao 1 file json theo dinh dang nhu sau: Checkin_(year)(month) (vi du: Checkin_202505 - Thang 5 Nam 2025)
+
+2. Config web
+- Vao file: flash\res\raw-assets\resources\data\designAll.f0731.json
+- Tao them 1 doan json cho event checkin voi child theo mau Checkin_(year)(month) (vi du: Checkin_202505 - Thang 5 Nam 2025)
+
+3. Luu y: Khi replace file thì can tat server va web di, xoa file can upload o tren vps truoc roi moi tai file moi len
+
+systemctl restart php-fpm
+systemctl restart nginx
+
+cd /data/gameserver/s1
+./start.sh
+cd /data/gameserver/login
+./start.sh
+
+Vao game test lai, neu van chua cap nhat duoc thi khoi dong lai VPS, van de nay co the do luu cache file tu he thong
+
+--------------Gộp Server--------------
+giu Nguyen cau hinh may chu trong db: fhsg_web.server_list
+trong folder chua game server dich(vi du gop s2 vao s1 thi gameserver dich la s2) ta thay doi lai cau hinh config db trong file app.properties.
+sau khi gop van phai bat game server dich len thi nguoi choi moi co the dang nhap duoc
+
+
+4. reset bxh
+vào sql bảng : system_blob 
+xóa từ arena_blob đến rank_craft (nếu muốn xóa cả Quốc Chiến thì xóa thêm cột qi_zhen_yi_bao_activity)

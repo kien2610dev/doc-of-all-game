@@ -1,0 +1,29 @@
+1:Nâng cảnh giới và skill
+
+Skill cảnh giới (Skill 5 LYK)
+File: release\文本语言表.xlsx - file này chứa nội dung văn bản hiển thị
+- Cột A: Id văn bản mô tả (tên skill, mô tả skill)
+- Cột B: văn bản mô tả
+- Cột C: văn bản mô tả
+-> cả 2 để giống nhau cũng đc cho đỡ nhầm lẫn
+
+File: release\英雄.xlsx - file này chứa các cấu hình thông tin của hero
+Sheet cấu hình skill: 英雄技能
+- Cột A: Id skill
+- Cột B: Id skill gốc
+- Cột R: Id của tên skill
+- Cột T: Id của skill icon
+- Cột AI: Id văn bản mô tả skill
+-> Lưu ý:
++ Cột AI sẽ tương ứng với Id mô tả skill của file release\文本语言表.xlsx
++ Cột R sẽ tương ứng với Id tên skill của file release\文本语言表.xlsx
+
+File: release\境界.xlsx - file này chứa cấu hình của cảnh giới
+Tại sheet: 境界基础 tìm xem có id hero cần thêm hay chưa, chưa có thì điền thêm vào
+- Cột A: Id hero
+- Cột B: Tên hero
+- Cột C: Số sao cần để có thể mở tính năng cảnh giới
+- Cột F: Config cấp cảnh giới để mở skill, cách làm như sau:
++ Mẫu ví dụ: 1:10140240#11:10140240#21:10140240
++ Ở đây theo như phân tích sẽ là: cảnh giới cấp 1 mở skill id 10140240(level 1), cảnh giới cấp 11 nâng cấp skill lên skill id 10140240(level 2), cảnh giới cấp 21 tiếp tục nâng skill lên skill id 10140240(level 3)
+ ~> sau khi làm xong hết thì gửi dev file để pack lại data upload và test

@@ -1,0 +1,19 @@
+Chạy lệnh trên MySQL
+
+INSERT INTO h5_cq_001.`actors`(accountid, accountname, actorid, actorname, job, sex, status, level, exp, serverindex, createtime, updatetime, lastonlinetime, lastloginip, baggridcount, gold, yuanbao, totalpower, recharge, paid, fbuid, sceneid, totalonline, dailyonline, vip, vip_level, essence, talentvalue, tianti_level, tianti_dan, tianti_win_count, tianti_week_refres, guildid, guildpos, feats, diamond, history_diamond, zhuansheng, pfid, appid, passive_count, skill_data, passive_data) SELECT accountid, accountname, actorid, actorname, job, sex, status, level, exp, serverindex, createtime, updatetime, lastonlinetime, lastloginip, baggridcount, gold, yuanbao, totalpower, recharge, paid, fbuid, sceneid, totalonline, dailyonline, vip, vip_level, essence, talentvalue, tianti_level, tianti_dan, tianti_win_count, tianti_week_refres, guildid, guildpos, feats, diamond, history_diamond, zhuansheng, pfid, appid, passive_count, skill_data, passive_data FROM h5_cq_002.`actors` WHERE 1;
+INSERT INTO h5_cq_001.`actorvariable`(actorid, variable, storedata, cs_variable) SELECT actorid, variable, storedata, cs_variable FROM h5_cq_002.`actorvariable` WHERE 1;
+INSERT INTO h5_cq_001.`friends`(actorid, attention, black, chat, misc, attentionstr, blackstr, chatstr, miscstr) SELECT actorid, attention, black, chat, misc, attentionstr, blackstr, chatstr, miscstr FROM h5_cq_002.`friends` WHERE 1;
+INSERT INTO h5_cq_001.`guildlist`(guildid, guildname, serverindex, variable, variable2, variable3) SELECT guildid, guildname, serverindex, variable, variable2, variable3 FROM h5_cq_002.`guildlist` WHERE 1;
+INSERT INTO h5_cq_001.`items`(uid, actorid, bag_type, id, count, expire_time, attrs) SELECT uid, actorid, bag_type, id, count, expire_time, attrs FROM h5_cq_002.`items` WHERE 1;
+INSERT INTO h5_cq_001.`mails`(uid, actorid, readstatus, sendtime, head, context, award, awardstatus) SELECT uid, actorid, readstatus, sendtime, head, context, award, awardstatus FROM h5_cq_002.`mails` WHERE 1;
+
+Chạy xong chạy lệnh này
+
+UPDATE h5_cq_001.`actors` SET serverindex = 1 WHERE 1=1;
+
+sửa data h5_server
+
+sửa trong data_web --> ty_server xóa 1 sv đã gộp đi chỉ để lại sv gộp vào
+UPDATE data_web.`users` SET last_server = 1 WHERE last_server = 2;
+
+update WEB.`ny_log_giftcode` set server_id = 1 WHERE server_id = 2

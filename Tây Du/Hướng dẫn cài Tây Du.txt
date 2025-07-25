@@ -1,0 +1,122 @@
+------Fix dừng hỗ trợ CentOS 7 sau 01/07/2024----------
+
+cd /etc/yum.repos.d/
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+yum clean all
+yum update -y
+
+- Cài đặt AA-Panel
+
+# yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_7.0_en.sh && bash install.sh
+
+- Tắt ssl AA-Panel
+# rm -f /www/server/panel/data/ssl.pl && /etc/init.d/bt restart
+# bt 14
+
++ http://192.168.2.177
+
+
+- Cài đặt MySQL 5.6, Nginx 1.21, PHP 5.6
+
+- Tắt tường lửa
+# systemctl stop firewalld
+# systemctl disable firewalld
+
+# yum install ntp -y
+# ln -f -s /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+# timedatectl set-timezone Asia/Ho_Chi_Minh
+# systemctl start ntpd
+# systemctl enable ntpd
+# ntpdate -u vn.pool.ntp.org
+
+- Upload data.zip vào /
+cd /
+unzip data.zip
+
+- Cấp quyền
+# chmod -R 0777 /data
+
+- Upload ver.zip vào /data/web/game/client
+# cd /data/web/web/game/client
+# unzip -q ver.zip
+# chmod -R 0777 ver
+
+# cd /data
+# rpm -ivh jdk-8u144-linux-x64.rpm
+
+- Đổi Pass MYSQL (toandaik) d4f84d8daf79e208
+- Thiết lập MYSQL -> Logs -> Binary Log OFF
+
+# mysql -u root -pd4f84d8daf79e208
+# GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'd4f84d8daf79e208' WITH GRANT OPTION;
+# FLUSH PRIVILEGES;
+# exit;
+
+Sửa pass mySQL: data/sql/initsql
+
+- Import DB
+# cd /data/sql/ && sh initsql.sh
+- Edit: game_manager -> host (ip, user_name, password(của VPS), domain(IP VPS)), platform, server, gm_game_servers
+                        
+
+- Tạo Website port 80 /data/web
+- Tạo rewrite
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+- Tạo Website port 818 /data/web/game/client/gameService
+- Cài đặt - Limit access - /yunfanManager1123/ - yunfanManager1123 - admin - 123456 
+- Cài đặt Node.js manager
+- Thêm Web socket port 5000  /data/web/socket
+
+- Thay thế IPVPS bằng IP của bạn và pass MYSQL
+\data\game\log-server\jdbc.properties
+\data\game\openservers\cross-server-1\config\app.properties
+\data\game\openservers\cross-server-template-xy\config\app.properties
+\data\game\openservers\game-server-1\config\app.properties
+\data\game\openservers\xy-server-template\config\app.properties
+\data\redis\redis-6379.conf
+\data\redis\redis-6380.conf
+\data\redis\stop-redis.sh
+\data\sql\game_manager.sql
+\data\sql\initsql.sh
+\data\xkm-tomcat\webapps\center\WEB-INF\classes\app.properties
+\data\xkm-tomcat\webapps\gameManager\WEB-INF\classes\config\app.properties
+\data\config.ini
+\data\ttt.py
+
+\data\web\api\config.php
+\data\web\game\client\config.php
+\data\web\game\client\play.php                     ( IP VPS cũ -->  Gắn tên miền vào)
+\data\web\game\client\gameConfig\libQuickSDK.js    ( IP VPS cũ -->  Gắn tên miền vào) dòng 322
+
+\data\web\game\client\gameService\center\config.php ( IP VPS cũ (ko có tên miền)-->  Gắn tên miền vào) dòng 21,  IP VPS có và MSQL
+\data\web\game\client\gameService\center\sendMail.php
+\data\web\game\client\gameService\center\gameserver\listForClient.php
+\data\web\game\client\gameService\yunfanManager1123\config\globalConfig.js
+
+
+- Chạy Server
+# cd /data/redis && ./start-redis.sh
+# cd /data/xkm-tomcat/bin && ./startup.sh
+# cd /data/game/log-server/bin && sh startup.sh
+# cd /data/game/openservers/cross-server-1/bin && sh startup.sh
+# cd /data/game/openservers/game-server-1/bin && sh startup.sh
+cd /data/game/openservers/game-server-2/bin && sh startup.sh
+
+- Tắt server
+# cd /data/game/openservers/game-server-1/bin && sh shutdown.sh
+# cd /data/game/openservers/cross-server-1/bin && sh shutdown.sh
+# cd /data/game/openservers/game-server-2/bin && sh shutdown.sh
+# cd /data/game/log-server/bin && sh shutdown.sh
+# cd /data/xkm-tomcat/bin && ./shutdown.sh
+# cd /data/redis && ./stop-redis.sh
+
+- Play
++ http://192.168.2.177
+
+- Admin
++ http://103.178.235.163:818/yunfanManager1123
++ admin - 123456

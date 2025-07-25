@@ -1,0 +1,4 @@
+-----reset bxh-----
+
+vào sql bảng : system_blob 
+xóa từ arena_blob đến rank_craft (nếu muốn xóa cả Quốc Chiến thì xóa thêm cột qi_zhen_yi_bao_activity)

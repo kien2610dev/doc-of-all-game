@@ -1,0 +1,6 @@
+update file templates.bin của game LYK mà không cần ctrl+f5 để reload cache
+tại file www/version.json tìm đến thẻ như sau: "template/templates.bin": "template/templates.bin",
+đổi templates.bin thành templates2.bin hoặc gì cũng đc, hoặc đánh số theo phiên bản để nhận biết phiên bản update
+ví dụ hoàn chỉnh "template/templates.bin": "template/templates2.bin",
+sau đó upload file version.json vào đúng thư mục chứa file là được
+cập nhật như này thì không cần phải tắt nginx và php-fpm nữa, chỉ cần đồng bộ data với backend server là đc

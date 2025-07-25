@@ -1,0 +1,471 @@
+USE fhsg_s1;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+SET @offset = 10000; -- Khởi tạo biến offset
+
+-- player
+INSERT INTO player (
+    id, account_id, name, sex, icon, head_frame, level, level_exp, 
+    fight, money, game_money, energy, vip_level, vip_exp, honor, 
+    stamina, server_id, create_time, downline_time, upgrade_time
+)
+SELECT 
+    id + @offset,
+    account_id,
+    name,
+    sex,
+    icon,
+    head_frame,
+    level,
+    level_exp,
+    fight,
+    money,
+    game_money,
+    energy,
+    vip_level,
+    vip_exp,
+    honor,
+    stamina,
+    server_id,
+    create_time,
+    downline_time,
+    upgrade_time
+FROM fhsg_s2.player
+WHERE id NOT IN (SELECT id - @offset FROM fhsg_s1.player WHERE id > @offset);
+
+-- item
+INSERT INTO item (player_id, template_id, bag_id, count, update_time)
+SELECT 
+    player_id + @offset,
+    template_id,
+    bag_id,
+    count,
+    update_time
+FROM fhsg_s2.item
+WHERE player_id IS NOT NULL;
+
+-- activity_battle
+INSERT INTO activity_battle (player_id, data_pack, formation_pack, update_time)
+SELECT 
+    player_id + @offset,
+    data_pack,
+    formation_pack,
+    update_time
+FROM fhsg_s2.activity_battle;
+
+-- activity_player
+INSERT INTO activity_player (player_id, progress, type, reset_time, param)
+SELECT 
+    player_id + @offset,
+    progress,
+    type,
+    reset_time,
+    param
+FROM fhsg_s2.activity_player
+WHERE player_id IS NOT NULL;
+
+-- arena
+INSERT INTO arena (player_id, data_pack, best_rank, win_count_sum, fight_count_sum)
+SELECT 
+    player_id + @offset,
+    data_pack,
+    best_rank,
+    win_count_sum,
+    fight_count_sum
+FROM fhsg_s2.arena
+WHERE player_id IS NOT NULL;
+
+-- card
+INSERT INTO card (
+    player_id, template_id, level, num, exp, grade, unit_level, 
+    unit_grade, card_equips, unit_equips, rune_pack, update_time, fight
+)
+SELECT 
+    player_id + @offset,
+    template_id,
+    level,
+    num,
+    exp,
+    grade,
+    unit_level,
+    unit_grade,
+    card_equips,
+    unit_equips,
+    rune_pack,
+    update_time,
+    fight
+FROM fhsg_s2.card
+WHERE player_id IS NOT NULL;
+
+-- charge
+INSERT INTO charge (
+    player_id, first_pay, first_pay_reward_get, vip_pack, payment_pack,
+    yueka_end_time, long_yueka, yueka_get_time, long_yueka_get_time
+)
+SELECT 
+    player_id + @offset,
+    first_pay,
+    first_pay_reward_get,
+    vip_pack,
+    payment_pack,
+    yueka_end_time,
+    long_yueka,
+    yueka_get_time,
+    long_yueka_get_time
+FROM fhsg_s2.charge
+WHERE player_id IS NOT NULL;
+
+-- daily_mission
+INSERT INTO daily_mission (player_id, template_id, progress, award_get, reset_time, end_time)
+SELECT 
+    player_id + @offset,
+    template_id,
+    progress,
+    award_get,
+    reset_time,
+    end_time
+FROM fhsg_s2.daily_mission
+WHERE player_id IS NOT NULL;
+
+-- friend
+INSERT INTO friend (
+    player_id, friend_id, status, apply_time, add_time, add_black_time,
+    gift_strength_time, has_strength, get_strength_time
+)
+SELECT 
+    player_id + @offset,
+    friend_id + @offset,
+    status,
+    apply_time,
+    add_time,
+    add_black_time,
+    gift_strength_time,
+    has_strength,
+    get_strength_time
+FROM fhsg_s2.friend;
+
+-- guide
+INSERT INTO guide (player_id, init_goods_send, data_pack, update_time)
+SELECT 
+    player_id + @offset,
+    init_goods_send,
+    data_pack,
+    update_time
+FROM fhsg_s2.guide
+WHERE player_id IS NOT NULL;
+
+-- guild
+INSERT INTO guild (
+    id, guild_name, guild_icon, guild_icons_buy, guild_icon_frame, guild_icon_frame_get,
+    guild_join_condition, guild_limit_level, guild_remark, guild_leader_id,
+    guild_member, guild_log, guild_hire_hero, send_mail_cnt, reset_time
+)
+SELECT 
+	id + @offset,
+    guild_name,
+    guild_icon,
+    guild_icons_buy,
+    guild_icon_frame,
+    guild_icon_frame_get,
+    guild_join_condition,
+    guild_limit_level,
+    guild_remark,
+    guild_leader_id + @offset,
+    guild_member,
+    guild_log,
+    guild_hire_hero,
+    send_mail_cnt,
+    reset_time
+FROM fhsg_s2.guild;
+
+-- guild_self
+INSERT INTO guild_self (
+    player_id, guild_id, guild_icon, guild_icons_buy, apply_cnt,
+    worship_cnt, join_time, update_time, hire_hero
+)
+SELECT 
+    player_id + @offset,
+	guild_id + @offset,
+    guild_icon,
+    guild_icons_buy,
+    apply_cnt,
+    worship_cnt,
+    join_time,
+    update_time,
+    hire_hero
+FROM fhsg_s2.guild_self
+WHERE player_id IS NOT NULL;
+
+-- guozhan_self
+INSERT INTO guozhan_self (player_id, pass_city_indexs, stay_city_index, nation, nation_change_time)
+SELECT 
+    player_id + @offset,
+    pass_city_indexs,
+    stay_city_index,
+    nation,
+    nation_change_time
+FROM fhsg_s2.guozhan_self;
+
+-- item_single
+INSERT INTO item_single (
+    uuid, player_id, template_id, enhance_level, hero_tpl_id, stars,
+    bag_id, hp_ex, atk_ex, def_ex, attr_ex, unit_attr, update_time, exp
+)
+SELECT 
+    uuid,
+    player_id + @offset,
+    template_id,
+    enhance_level,
+    hero_tpl_id,
+    stars,
+    bag_id,
+    hp_ex,
+    atk_ex,
+    def_ex,
+    attr_ex,
+    unit_attr,
+    update_time,
+    exp
+FROM fhsg_s2.item_single;
+
+-- player_buy
+INSERT INTO player_buy (player_id, buy_strength_count, buy_strength_time, buy_coin_count, buy_coin_time)
+SELECT 
+    player_id + @offset,
+    buy_strength_count,
+    buy_strength_time,
+    buy_coin_count,
+    buy_coin_time
+FROM fhsg_s2.player_buy
+WHERE player_id IS NOT NULL;
+
+-- player_extra
+INSERT INTO player_extra (player_id, wx_share_time, is_add_shortcut, head_frame_blob)
+SELECT 
+    player_id + @offset,
+    wx_share_time,
+    is_add_shortcut,
+    head_frame_blob
+FROM fhsg_s2.player_extra
+WHERE player_id IS NOT NULL;
+
+-- pub
+INSERT INTO pub (
+    player_id, item_points, item_threshold, is_item_threshold, money_get_time,
+    money_points, money_threshold, is_money_threshold, add_time, guide_status
+)
+SELECT 
+    player_id + @offset,
+    item_points,
+    item_threshold,
+    is_item_threshold,
+    money_get_time,
+    money_points,
+    money_threshold,
+    is_money_threshold,
+    add_time,
+    guide_status
+FROM fhsg_s2.pub
+WHERE player_id IS NOT NULL;
+
+-- pvp
+INSERT INTO pvp (player_id, score, win_count, loose_count, selected_hero, add_time)
+SELECT 
+    player_id + @offset,
+    score,
+    win_count,
+    loose_count,
+    selected_hero,
+    add_time
+FROM fhsg_s2.pvp;
+
+-- secret
+INSERT INTO secret (
+    player_id, map_id, progress, revive_count, box_award, my_cost,
+    enemy_cost, online_formation, reset_time
+)
+SELECT 
+    player_id + @offset,
+    map_id,
+    progress,
+    revive_count,
+    box_award,
+    my_cost,
+    enemy_cost,
+    online_formation,
+    reset_time
+FROM fhsg_s2.secret;
+
+-- sign
+INSERT INTO sign (player_id, sign_site, award_time)
+SELECT 
+    player_id + @offset,
+    sign_site,
+    award_time
+FROM fhsg_s2.sign;
+
+-- stage
+INSERT INTO stage (
+    player_id, star_points, formation_slots, stage_blob, elite_stage_blob,
+    elite_count, last_elite_time, heros_blob, update_time, crawl_state
+)
+SELECT 
+    player_id + @offset,
+    star_points,
+    formation_slots,
+    stage_blob,
+    elite_stage_blob,
+    elite_count,
+    last_elite_time,
+    heros_blob,
+    update_time,
+    crawl_state
+FROM fhsg_s2.stage;
+
+-- store
+INSERT INTO store (
+    player_id, normal_item, vip_pack, army_shop, black_market,
+    overcome_pack, arena_pack, add_time, update_time
+)
+SELECT 
+    player_id + @offset,
+    normal_item,
+    vip_pack,
+    army_shop,
+    black_market,
+    overcome_pack,
+    arena_pack,
+    add_time,
+    update_time
+FROM fhsg_s2.store;
+
+-- teamskill
+INSERT INTO teamskill (player_id, skills, update_time)
+SELECT 
+    player_id + @offset,
+    skills,
+    update_time
+FROM fhsg_s2.teamskill
+WHERE player_id IS NOT NULL;
+
+-- treasure_rob
+INSERT INTO treasure_rob (player_id, data_pack, protect_end_time, do_guide, update_time)
+SELECT 
+    player_id + @offset,
+    data_pack,
+    protect_end_time,
+    do_guide,
+    update_time
+FROM fhsg_s2.treasure_rob;
+
+-- bag
+INSERT INTO bag (player_id, expand_blob)
+SELECT 
+    player_id + @offset,
+    expand_blob
+FROM fhsg_s2.bag
+WHERE player_id IS NOT NULL;
+
+-- mission
+INSERT INTO mission (player_id, template_id, progress, award_get, update_time)
+SELECT 
+    player_id + @offset,
+    template_id,
+    progress,
+    award_get,
+    update_time
+FROM fhsg_s2.mission
+WHERE player_id IS NOT NULL;
+
+-- overcome
+INSERT INTO overcome (
+    player_id, progress, box_award_get, enemy_pack, hp_pack,
+    reset_count, last_reset_time, update_time
+)
+SELECT 
+    player_id + @offset,
+    progress,
+    box_award_get,
+    enemy_pack,
+    hp_pack,
+    reset_count,
+    last_reset_time,
+    update_time
+FROM fhsg_s2.overcome;
+
+-- online_award
+INSERT INTO online_award (player_id, online_time, update_time, award_temp)
+SELECT 
+    player_id + @offset,
+    online_time,
+    update_time,
+    award_temp
+FROM fhsg_s2.online_award;
+
+-- invite
+INSERT INTO invite (player_id, invite_str, invited_task, invite_cnt, is_award)
+SELECT 
+    player_id + @offset,
+    invite_str,
+    invited_task,
+    invite_cnt,
+    is_award
+FROM fhsg_s2.invite;
+
+-- mail
+INSERT INTO mail (
+    player_id, template_id, send_name, title, content, mail_param,
+    attach, create_time, is_read
+)
+SELECT 
+    player_id + @offset,
+    template_id,
+    send_name,
+    title,
+    content,
+    mail_param,
+    attach,
+    create_time,
+    is_read
+FROM fhsg_s2.mail;
+
+-- pk
+INSERT INTO pk (player_id, win_count, loose_count)
+SELECT 
+    player_id + @offset,
+    win_count,
+    loose_count
+FROM fhsg_s2.pk
+WHERE player_id IS NOT NULL;
+
+-- wanba_gift
+INSERT INTO wanba_gift (
+    player_id, is_new_get, week_get_time, qzone_get_time,
+    vip_get_time, qedj_get_time
+)
+SELECT 
+    player_id + @offset,
+    is_new_get,
+    week_get_time,
+    qzone_get_time,
+    vip_get_time,
+    qedj_get_time
+FROM fhsg_s2.wanba_gift
+WHERE player_id IS NOT NULL;
+
+
+UPDATE player SET server_id = 1;
+
+UPDATE player AS p1
+JOIN (
+    SELECT account_id, MAX(level) AS max_level
+    FROM player
+    GROUP BY account_id
+) AS p2 ON p1.account_id = p2.account_id
+SET p1.server_id = CASE
+    WHEN p1.level < p2.max_level THEN 9999
+    ELSE 1
+END;
+
+update WEB.`ny_log_giftcode` set server_id = 1 WHERE server_id = 2
