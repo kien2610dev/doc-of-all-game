@@ -25,8 +25,8 @@ if __name__ == "__main__":
     start_date = "2025-08-03 23:59:59"
     #start_date = "2025-07-10 02:00:00"
 
-    #start_date = "2025-07-12 02:00:00"
-    #start_date = "2025-07-13 23:59:59"
+    #start_date = "2025-08-02 00:00:00"
+    #start_date = "2025-08-01 23:59:59"
     interval_days = 7
     occurrences = 100
 

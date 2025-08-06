@@ -1,0 +1,41 @@
+Hướng dẫn thêm vật phẩm rương đồ
+
+File excel: 物品表 - file này khai báo các thông tin liên quan tới vật phẩm
+
+Sheet: 基础物品 - sheet này khai báo các thông tin cơ bản của item
+- Cột A: item id
+- Cột B: Tên item
+- Cột C: Id icon
+- Cột D: Loại item
+- Cột E: Cấp độ item
+- Cột F: Chất lượng item
+- Cột G: Mô tả item
+- Cột H: Mô tả loại
+- Cột I: Mô tả ngắn
+- Cột J: Nhận xét
+- Cột L: Mô tả
+- Cột M: Xếp chồng tối đa
+- Cột N: Sử dụng tự động (0: không/1: có)
+- Cột O: Dùng trực tiếp (0: không/1: có)
+- Cột P: Dùng nhiều cùng lúc (0: không/1: có)
+- Cột Q: Hướng dẫn dùng (0: không/1: có)
+- Cột R: Đường dẫn gì đó ko rõ :Dùng
+- Cột T: Cấu hình bán ra được gì
+- Cột U: Thời hạn
+- Cột V: Thời gian hết hạn tự nhiên
+- Cột W: Số ngày tối thiểu để dùng được item
+- Cột X: Số ngày tối đa để dùng item
+- Cột Y: Định giá
+- Cột Z: Danh mục item chính
+
+Sheet: 礼包 - cấu hình gói quà item
+- Cột A: Id item
+- Cột B: Thể loại item
+- Cột C: Cấu hình các item trong gói
+- Cột D: Kiểu
+- Cột E: Cấu hình item cần để mở gói (để trống thì không cần item phụ để mở)
+- Cột F: Có thông báo khi mở thưởng không (0: không/1: có)
+- Cột G: Cấu hình item được thông báo khi mở
+- Cột H: Random hay tự chọn (1: random/ 2: tự chọn)
+- Cột I: Hiển thị item trong gói
+- Cột K: ghi chú
