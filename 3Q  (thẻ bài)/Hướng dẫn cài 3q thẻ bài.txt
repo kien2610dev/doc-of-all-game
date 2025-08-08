@@ -1,0 +1,279 @@
+HƯỚNG DẪN CÀI ĐẶT 3Q THẦN MA H5 - YÊU CẦU HỆ ĐIỀU HÀNH CENTOS7
+
+===========================================================================
+
+Đầu tiên cài đặt aapanel:
+
+URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en.sh "$URL";fi;bash install_7.0_en.sh aapanel
+
+-> Nhập y nếu hiện
+
+rm -f /www/server/panel/data/ssl.pl && /etc/init.d/bt restart
+
+bt 14
+
+Môi trường cài đặt:
+
+Nginx 1.20
+Mysql 5.7
+php 5.6
+
+=================================================================================
+
+2、Mở cổng：1-65535
+
+Tắt tường lửa:
+
+systemctl stop firewalld
+systemctl disable firewalld
+Vào aapanel chọn Security -> Turn off Firewall
+
+=================================================================================
+
+3.tải file data.zip lên server rồi giải nén
+
+Cấp Quyền:
+
+chmod -R 755 /usr
+chmod -R 777 /www/wwwroot/
+chmod -R 777 /data/
+
+Đổi Pas DB trực tiếp：EHrWXkpA30e6f7CQx2cx
+
+==================================================================================
+
+Mở etc/profile và thêm nội dung sau:
+
+export JAVA_HOME=/usr/local/jdk
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=$PATH:/usr/local/erlang/bin
+export PATH=$PATH:/usr/local/rabbitmq/sbin
+export PATH=$PATH:/usr/local/mongodb/bin
+
+Thực thi hiệu lực:
+
+source /etc/profile
+
+=========================================================================================
+
+* Môi trường cài đặt:
+
+yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel
+
+==========================================================================================
+
+Cài đặt ERL:
+
+cd /usr/local
+tar zxf otp_src_24.2.tar.gz
+
+mkdir -p /usr/local/erlang
+
+cd otp_src_24.2
+./configure --prefix=/usr/local/erlang
+
+make && make install
+
+
+* Cài RabbitMQ: 
+
+cd /usr/local
+tar xf rabbitmq-server-generic-unix-3.9.14.tar.xz
+
+mv rabbitmq_server-3.9.14 rabbitmq
+source /etc/profile
+
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-server -detached
+rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl set_user_tags admin administrator
+
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-server -detached
+rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl set_user_tags admin administrator
+
+===============================================================================================
+
+Vào rabbit với đường dẫn sau:
+
+http://IP:15672
+
+tk： admin
+mk： Abc123456...a
+
+Click vào Admin ấn chọn guest
+Kéo xuống bên dưới ấn nút Delete this user
+
+Sau đó click vào Admin chọn admin
+Sau đó click vào 2 cái Set topic permission và Set permission (Set cái topic rồi mới set per)
+
+===============================================================================================
+
+Chạy lệnh cài mongo:
+
+cd /usr/local/
+mkdir -p /usr/local/mongodb/data/
+mkdir -p /usr/local/mongodb/logs/
+
+=====================================================================================
+
+sửa thêm file /usr/local/mongodb/mongodb.conf
+
+coppy toàn bộ bên dưới dán vào mongodb.conf bên trong nhé (nếu không có thì tạo mongodb.conf rồi dán)
+ở đây mình tạo sẵn mongodb.conf rồi chỉ cần kéo file bỏ vào /usr/local/mongodb/
+
+#--------------------------------------
+
+# 默认27017
+port=27017
+
+#允许远程IP连接
+bind_ip=127.0.0.1
+
+# 数据库文件位置
+dbpath=/usr/local/mongodb/data
+
+# 是否以守护进程方式运行
+fork=true
+
+# 以追加方式写入日志
+logappend=true
+
+# 日志文件位置
+logpath=/usr/local/mongodb/logs/mongodb.log
+
+journal=true
+
+# 启用验证
+auth = true
+
+#------------------------------------------
+
+=====================================================================================
+
+Chạy lệnh bật mongo:
+
+mongod -f /usr/local/mongodb/mongodb.conf
+
+Sau đó chạy lệnh:
+
+netstat -nltp
+
+Xem thấy port 27017 lên là done
+
+
+Lệnh tắt mongo:
+
+mongod --shutdown --dbpath /usr/local/mongodb/data --port 27017
+
+=====================================================================================
+
+Cài đặt mongo:
+
+mongo
+use admin
+db.createUser({user:"abc123",pwd:"Abc123321123",roles:["root"]})
+exit
+
+mysql -u root -pEHrWXkpA30e6f7CQx2cx
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'EHrWXkpA30e6f7CQx2cx' WITH GRANT OPTION;
+FLUSH   PRIVILEGES;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'EHrWXkpA30e6f7CQx2cx' WITH GRANT OPTION;
+FLUSH   PRIVILEGES;
+grant all privileges on *.* to 'root'@'%' identified by 'EHrWXkpA30e6f7CQx2cx';
+quit
+
+===============================================================================================
+
+3.Sửa IP server: Ae dùng notepad++ find all IP thay về IP vps và domain thay về domain của ae
+
+Thay 414jgaming.com về tên mền của bạn,thay 103.77.172.144 về IP của bạn
+
+
+/data/game/console/store/global.conf.json
+
+/data/web/api/config.php
+
+/data/web/www/index-a103bb2e51.js
+
+/data/web/www/admin/static/js/main.da770e7e.chunk.js
+
+/data/web/www/js/bundle-883a8b0ae0.js
+
+/data/web/www/srv/yzx.out.js
+
+tcg.sql
+
+Import database,nên dung navicat nha ae:
+
+stat
+tcg
+cdks
+WEB  viết hoa
+
+============================================================================
+* Tạo Trang Web Chính:
+
+domain:80
+
+Đường dẫn:
+
+/data/web
+
+Xong ae add thêm url vào nhé
+
+* Url rewrite:
+
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+============================================================================
+* Khởi động trò chơi:
+
+mongod -f /usr/local/mongodb/mongodb.conf
+cd /data/game && ./start.sh
+
+
+Bắt đầu trò chơi - mỗi lệnh được thực hiện cách nhau khoảng 10-30 giây.
+
+cd /h5/server/game && ./start2  
+
+cd /data/game/game && ./start3   
+
+Check port:  netstat -lntp
+
+Lên port 8001 9000 20001 30001 27017 5672  là oke thiếu 1 trong các port sau thì check lại
+
+
+* Dừng trò chơi:
+
+cd /data/game && ./stop.sh
+
+Lệnh stop all:
+
+killall -9 java
+kill -9 nid
+
+
+Nếu reboot vps thì ae phải chạy lại RabbitMQ và mongo rồi mới start game:
+
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-server -detached
+
+mongod -f /usr/local/mongodb/mongodb.conf
+
+===============================================================================================
+
+* Thay Đổi Thông Báo Login:
+
+tcg.sql--> gm_announce
+
+* Đổi tên server thì vào tcg.sql ---> srv_game 
+
+
+=========================================================================
