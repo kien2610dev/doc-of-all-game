@@ -32,14 +32,14 @@ sửa thông báo trong db h5: h5_notice
 
 
 sửa những file sau ( ip/ tên miền): 160.30.44.123 - Sửa sang Ip mới hoặc tên miền mới
-api/game.php
-ver/209/entry.min.js
-pass4/js/jssdk/h5sdk.js
-
-sửa giao diện game trong 2 file sau
-131/resource/image/single/background_zycs_bg.jpg
-MU2/api/icon/bg.jpg
-
+/data/web/api/game.php
+/data/web/api/config.php
+/data/web/api/exchangeMoney_0808.php
+/data/web/api/exchangeMoney.php
+/data/web/ver/209/entry.min.js
+/data/web/pass4/js/jssdk/h5sdk.js
+/data/web/game/main/play.php
+/data/web/game/main/dev.html
 
 chạy server : 
 cd /data/server/mu_s1

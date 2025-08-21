@@ -1,0 +1,7 @@
+/data/web/www/js
+quickSelectHero() : điều kiện giờ đang là 4 thì bỏ qua, sửa lại 5 là được
+
+File: 通用 - Sheet: 全局变量
+ID: 500 - Số lượng char được hiến tế cao nhất
+ID: 501 - Số lượng hiến tế ấn quickSelect cao nhất
+ID: 502 - Số lượng hiến tế mảnh cao nhất

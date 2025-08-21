@@ -1,7 +1,7 @@
 import os
 
 
-folder_path = r"C:\Users\Lê Ann\Documents\Zalo Received Files\iconshop"
+folder_path = r"D:\\file test"
 
 
 for filename in os.listdir(folder_path):

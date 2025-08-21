@@ -25,11 +25,15 @@
 中元夜 - Lễ hội
 Bách Trửu - comming soon...
 端午龙舟 - Thuyền rồng.
+元宵喜乐-nguyên tiêu
+循环商城-shop trong cac sk (sheet 3).
+物品表-item
 
 ----chưa mở----
 新英雄上新活动 - Thí luyện.
 跨服元宝排行 - BXH tiêu.
 
-
+通用-id chức năng
+充值项-giá các gói mua
 
 充值项-gói mua thần long
