@@ -277,3 +277,13 @@ tcg.sql--> gm_announce
 
 
 =========================================================================
+
+.Cách xóa hết thông tin hiện tại
+xóa hết thông tin ở account_master
+	reboot
+	mongod -f /usr/local/mongodb/mongodb.conf
+
+	mongo -u "abc123" -p "Abc123321123" --authenticationDatabase "admin"
+	db.adminCommand({ listDatabases: 1 }).databases.forEach(function(database) {
+ 	   db.getSiblingDB(database.name).dropDatabase();
+	});
