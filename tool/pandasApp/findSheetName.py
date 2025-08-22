@@ -5,7 +5,7 @@ import pandas as pd
 folder_path = 'D:\\zipGame\\yeuki\\data\\game\\excel\\release'
 
 # Tên sheet cần tìm
-sheet_name_to_find = '英雄材料回退数量'
+sheet_name_to_find = '全服BOSS关卡'
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):
