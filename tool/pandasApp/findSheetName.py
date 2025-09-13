@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # Đường dẫn đến thư mục chứa các file Excel
-folder_path = 'D:\\zipGame\\yeuki\\data\\game\\excel\\release'
+folder_path = 'D:\\Open Game\\Hưng - Liên Minh Hải Tặc\\release'
 
 # Tên sheet cần tìm
-sheet_name_to_find = '全服BOSS关卡'
+sheet_name_to_find = '超级特权'
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):

@@ -1,0 +1,211 @@
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第699/789张(进阶礼包基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【进阶礼包基础】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第700/789张(进阶礼包奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【进阶礼包奖励】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第701/789张(转盘基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第702/789张(转盘轮次奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘轮次奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第703/789张(转盘刷新)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘刷新 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第704/789张(转盘消耗)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘消耗 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第705/789张(转盘分组)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘分组 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第706/789张(转盘奖品)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：转盘奖品 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第707/789张(跨服BOSS基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服BOSS基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第708/789张(跨服BOSS排行奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服BOSS排行奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第709/789张(跨服元宝排行基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服元宝排行基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第710/789张(跨服元宝排行奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服元宝排行奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第711/789张(跨服充值排行基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服充值排行基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第712/789张(跨服充值排行奖励)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 跨服充值排行奖励 第11行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服充值排行奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第713/789张(跨服战场)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服战场 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第714/789张(天梯争霸排名奖励)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 天梯争霸排名奖励 第14行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 天梯争霸排名奖励 第15行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 天梯争霸排名奖励 第16行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 天梯争霸排名奖励 第17行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：天梯争霸排名奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第715/789张(天梯争霸战斗刷新)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【天梯争霸战斗刷新】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第716/789张(段位奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：段位奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第717/789张(段位升级)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：段位升级 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第718/789张(段位赛奖品库)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：段位赛奖品库 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第719/789张(段位商店)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：段位商店 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第720/789张(跨服段位赛机器人库)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【跨服段位赛机器人库】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第721/789张(天级榜奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：天级榜奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第722/789张(跨服演武场排行榜奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服演武场排行榜奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第723/789张(跨服演武场挑战奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服演武场挑战奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第724/789张(跨服演武场每日宝箱)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：跨服演武场每日宝箱 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第725/789张(跨服演武场机器人库)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【跨服演武场机器人库】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第726/789张(连线英雄关卡)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：连线英雄关卡 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第727/789张(连线英雄怪物)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：连线英雄怪物 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第728/789张(连续充值基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：连续充值基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第729/789张(连续充值奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：连续充值奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第730/789张(通天塔关卡)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通天塔关卡 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第731/789张(怪物语录)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：怪物语录 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第732/789张(通天塔通关奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通天塔通关奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第733/789张(功能开启)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：功能开启 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第734/789张(全局变量)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：全局变量 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第735/789张(屏蔽字库)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：屏蔽字库 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第736/789张(通用排行榜配置)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通用排行榜配置 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第737/789张(通用排行榜奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通用排行榜奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第738/789张(通用自选礼包基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通用自选礼包基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第739/789张(通用自选礼包奖品池)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通用自选礼包奖品池 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第740/789张(通用自选礼包奖品项)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：通用自选礼包奖品项 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第741/789张(每日邀请)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：每日邀请 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第742/789张(邀请新人注册)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：邀请新人注册 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第743/789张(每日被邀请奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：每日被邀请奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第744/789张(邀请30级奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：邀请30级奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第745/789张(邀请60级奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：邀请60级奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第746/789张(邮件特权商城)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 邮件特权商城 第4行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 邮件特权商城 第5行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 邮件特权商城 第6行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 邮件特权商城 第7行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：邮件特权商城 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第747/789张(重置基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：重置基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第748/789张(重置消耗)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：重置消耗 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第749/789张(重置奖池)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 重置奖池 第53行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 重置奖池 第54行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 重置奖池 第55行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：重置奖池 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第750/789张(金币商店基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：金币商店基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第751/789张(金币商店奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：金币商店奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第752/789张(限定英雄召唤基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄召唤基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第753/789张(限定英雄召唤方式)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第4行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第5行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第6行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第7行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第8行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第9行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第10行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第11行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第12行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第13行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第14行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 限定英雄召唤方式 第15行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄召唤方式 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第754/789张(限定英雄召唤奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄召唤奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第755/789张(限定英雄培养商店)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄培养商店 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第756/789张(限定英雄商店)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄商店 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第757/789张(限定英雄商品)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄商品 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第758/789张(限定英雄升星活动)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄升星活动 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第759/789张(限定英雄升星任务)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限定英雄升星任务 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第760/789张(限时回退基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时回退基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第761/789张(限时回退方式)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时回退方式 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第762/789张(限时回退商店)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时回退商店 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第763/789张(限时玩法入口)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时玩法入口 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第764/789张(限时登陆基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【限时登陆基础】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第765/789张(限时登陆奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【限时登陆奖励】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第766/789张(限时皮肤商店基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时皮肤商店基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第767/789张(限时皮肤商品)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时皮肤商品 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第768/789张(限时重置基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时重置基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第769/789张(限时重置消耗)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时重置消耗 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第770/789张(限时重置商店)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：限时重置商店 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第771/789张(置换英雄池)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【置换英雄池】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第772/789张(预约奖励详情)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【预约奖励详情】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第773/789张(估值)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：已忽略【估值】
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第774/789张(驱魔之夜基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第775/789张(驱魔之夜小鬼)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜小鬼 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第776/789张(驱魔之夜随机奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜随机奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第777/789张(驱魔之夜等级)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜等级 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第778/789张(驱魔之夜任务)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜任务 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第779/789张(驱魔之夜累积任务奖励)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：驱魔之夜累积任务奖励 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第780/789张(魔术戏法活动基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：魔术戏法活动基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第781/789张(魔术戏法BOSS)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：魔术戏法BOSS 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第782/789张(召唤类型)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：召唤类型 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第783/789张(魔术戏法召唤)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：魔术戏法召唤 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第784/789张(魔术戏法礼包)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：魔术戏法礼包 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第785/789张(魔术戏法兑换)
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 魔术戏法兑换 第28行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 魔术戏法兑换 第29行是空行
+2025-09-10 16:45:42 WARN  com.ososx.tcg.officer.apps.cli.tpl.CliTplCmd Line:163 - 表 魔术戏法兑换 第30行是空行
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：魔术戏法兑换 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第786/789张(鸿运当头基础)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：鸿运当头基础 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第787/789张(鸿运当头礼包)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：鸿运当头礼包 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第788/789张(鸿运当头开放日期)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：鸿运当头开放日期 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在处理第789/789张(鸿运当头礼包池)
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：鸿运当头礼包池 阅读完毕;
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：正在写入文件...
+2025-09-10 16:45:42 INFO  com.ososx.tcg.officer.apps.cli.tpl.CliTplFrame Line:115 - 控制台输出：打包完毕！耗时:21秒

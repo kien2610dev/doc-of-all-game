@@ -287,3 +287,13 @@ Lệnh check port xem server lên chưa:
 netstat -nltp
 
 Xem có đủ là ok: 25672 4369 15672 27017 10086 9000 5672 7788 9999 4369 12345 10010
+
+6.Cách xóa hết thông tin hiện tại
+xóa hết thông tin ở account_master
+	reboot
+	mongod -f /usr/local/mongodb/mongodb.conf
+
+	mongo -u "abc123" -p "passtudat" --authenticationDatabase "admin" --port 27017
+	db.adminCommand({ listDatabases: 1 }).databases.forEach(function(database) {
+ 	   db.getSiblingDB(database.name).dropDatabase();
+	});

@@ -28,6 +28,7 @@ Bách Trửu - comming soon...
 元宵喜乐-nguyên tiêu
 循环商城-shop trong cac sk (sheet 3).
 物品表-item
+限定英雄召唤- sk quay tướng
 
 ----chưa mở----
 新英雄上新活动 - Thí luyện.
@@ -37,3 +38,6 @@ Bách Trửu - comming soon...
 充值项-giá các gói mua
 
 充值项-gói mua thần long
+vip商城/七日登录 - gói vip(Nạp)
+
+1-dame 2-magic 3-tank 4-buff
