@@ -1,7 +1,7 @@
 from datetime import datetime
 
 # Nhập ngày theo dạng chuỗi
-start_date_str = "2025-09-09"
+start_date_str = "2025-09-13"
 
 # Chuyển chuỗi thành datetime (format theo năm-tháng-ngày)
 start_date = datetime.strptime(start_date_str, "%Y-%m-%d")

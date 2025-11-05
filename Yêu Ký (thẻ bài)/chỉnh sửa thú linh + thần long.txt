@@ -1,0 +1,49 @@
+1:Thần Long - file 神龙
+
+sheet 神龙基础 cấu hình level chỉ số.
+A - 神龙ID - ID Thần Long  
+B - 原型ID - ID nguyên mẫu  
+C - 背景底 - Nền sau  
+D - 神龙星级 - Cấp sao Thần Long  
+E - 神龙名称 - Tên Thần Long  
+F - 神龙品阶 - Phẩm cấp Thần Long  
+G - 图标 - Biểu tượng  
+H - 模型 - Mô hình  
+I - 全员附加属性 - Thuộc tính cộng thêm cho toàn đội  
+J - 基础技能伤害 - Sát thương kỹ năng cơ bản  
+K - 升星消耗 - Tiêu hao tăng sao  
+L - 献祭返还 - Hoàn trả khi hiến tế  
+M - 升星获得图鉴经验 - Kinh nghiệm sổ tay nhận được khi tăng sao  
+N - 升星御灵等级要求 - Yêu cầu cấp Linh khi tăng sao
+
+sheet 神龙召唤 cấu hình thông số triệu hồi thần long
+A - 神龙ID - ID Thần Long  
+B - 通用召唤材料 - Nguyên liệu triệu hồi thông thường  
+C - 特殊召唤材料 - Nguyên liệu triệu hồi đặc biệt  
+D - 首次召唤获得图鉴经验 - Kinh nghiệm sổ tay nhận được khi triệu hồi lần đầu  
+E - 御灵经验 - Kinh nghiệm Ngự Linh
+
+2:Thú Linh - file 兽灵
+
+sheet 兽灵基础 cấu hình thông tin linh thú
+A - 兽灵ID - ID Thú Linh  
+B - 兽灵名称 - Tên Thú Linh  
+C - 关联兽魂ID - ID Linh Hồn Thú liên kết  
+D - 激活道具 - Đạo cụ kích hoạt  
+E - 模型 - Mô hình  
+F - 兽灵介绍 - Giới thiệu Thú Linh  
+G - 对话气泡1 - Bong bóng thoại 1  
+H - 对话气泡2 - Bong bóng thoại 2  
+I - 对话气泡3 - Bong bóng thoại 3  
+J - 是否开启 - Có mở hay không  
+K - tips - Gợi ý / Mẹo hiển thị
+
+sheet 兽灵培养 cấu hình chỉ số từng level của thú linh 
+A - ID - Mã ID  
+B - 兽灵ID - ID Thú Linh  
+C - 等级 - Cấp độ  
+D - 升级所需培养次数 - Số lần bồi dưỡng cần để thăng cấp  
+E - 单次培养属性 - Thuộc tính bồi dưỡng mỗi lần  
+F - 等级额外属性 - Thuộc tính thêm theo cấp độ  
+G - 兽魂属性加成百分比 - Phần trăm cộng thêm thuộc tính Linh Hồn Thú  
+H - 最高等级 - Cấp độ tối đa

@@ -1,0 +1,35 @@
+1 - 英雄 - File thông tin tướng.
+Sheet 英雄基础 : Sao tướng.
+	Cột I : Nghề nghiệp(1-dame, 2-phép ,3-tank,4 trợ)
+	Cột AB : Nội tại và Skill 1 -> 4 của tướng.(3 level).
+Sheet 英雄进阶 : Tiến triển anh hùng.
+
+Sheet 英雄高阶升星 : Nâng cấp cuối cùng của cấp tướng. 
+	VD:max cấp là 10 thì khi level 9 up lên 10 thì sẽ xuất hiện nâng cấp đặc biệt.(Nếu cột D bên sheet 英雄基础 của level 9 không điền số 1 thì 	sẽ nâng như bình thường).Lưu y cột C sẽ điều mã id level 9 cột L điền id level 10.
+
+Sheet 英雄技能 : Skill tướng. 
+	Skill-2 3 level đầu đi cùng với cấp tướng 3 level sau đi cùng với cảnh giới nên cột B của skill-2 từ level 1 đến level 6 phải giống nhau 	đều là id của level 1 của skill-2.
+
+2 - 境界 - Cảnh giới tướng.
+Sheet 境界基础(sheet 1) : cột F liệt kê các skill được nâng cấp khi cảnh giới đạt mốc.
+	Form điền skill : (1:LV4-SKILL2#11:LV4-SKILL2:LV1-SKILL5#21:LV4-SKILL2:LV2-SKILL5#31:LV4-SKILL2:LV3-SKILL5#41:LV4-SKILL2:LV4-SKILL5#51:LV5-	SKILL2:LV5-SKILL5#61:LV5-SKILL2:LV6-SKILL5#71:LV5-SKILL2:LV7-SKILL5#81:LV5-SKILL2:LV8-SKILL5#91:LV5-SKILL2:LV9-SKILL5#101:LV6-SKILL2:LV10-	SKILL5)
+
+3 - 仙器 - Tiên khí tướng độc quyền.
+Sheet 仙器基础(sheet 1): thông tin của tiên khí.
+	Cột N : Anh hùng độc quyền (điền mã tướng sở hữu tiên khí).
+
+4 - 英雄羁绊 - Phúc tướng.
+Sheet 英雄羁绊(sheet 1): Thông tin phúc tướng.
+	Cột G : dòng 1 với 3 để số tương đương với hệ của phúc tướng phụ dòng 2 để mã phúc tướng chính tùy chọn.
+
+5 - 藏品 - Tàng phẩm + Nội tại tướng.
+Sheet 藏品随机英雄组(sheet 6): Tàng phẩm tướng.
+Sheet 专属英雄技能(sheet 11): Nội tại tướng.
+	Cột B điền id tướng, cột F G H điền 3 level 1 2 3 của nội tại.
+
+6 - 物品表 - Mảnh tướng.
+Sheet 碎片(sheet 3): Thông tin mảnh tướng.
+	Cột A-id mảnh tướng.
+	Cột E-Số lượng mảnh cần để ghép hoàn chỉnh.
+	Cột G-id tướng.
+7 - 文本语言表 - Text hiển thị Tên tướng, tên SKill, nội dung Skill của tướng trong file 英雄. VD: cột G sheet 1 và cột AI sheet 5.

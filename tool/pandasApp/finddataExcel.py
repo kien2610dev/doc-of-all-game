@@ -2,11 +2,11 @@ import os
 import pandas as pd
 
 # Đường dẫn đến thư mục chứa các file Excel
-folder_path = 'D:\\Open Game\\a Trung - Tam quốc chiến\\release'
+folder_path = 'D:\\1\\23102025-opnewfix\\release'
 
 # Tên cột và giá trị cần tìm
-column_name_to_find = '赛季'
-value_to_find = 1
+column_name_to_find = '价格'
+value_to_find = 98
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):
