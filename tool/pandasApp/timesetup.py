@@ -21,13 +21,13 @@ def generate_timestamps(start_date, interval_days, occurrences):
 
 # Example usage
 if __name__ == "__main__":
-    #start_date = "2025-11-03 00:00:00"
-    start_date = "2025-11-09 23:59:59"
+    #start_date = "2025-11-10 00:00:00"
+    start_date = "2025-11-16 23:59:59"
     #start_date = "2025-07-10 02:00:00"
 
-    #start_date = "2025-11-01 00:00:00"
-    #start_date = "2025-10-31 23:59:59"
-    interval_days = 14
+    #start_date = "2025-11-08 00:00:00"
+    #start_date = "2025-11-07 23:59:59"
+    interval_days = 7
     occurrences = 100
 
     timestamps = generate_timestamps(start_date, interval_days, occurrences)

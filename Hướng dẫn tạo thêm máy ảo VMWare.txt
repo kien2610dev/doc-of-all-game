@@ -1,0 +1,24 @@
+Hướng dẫn tạo thêm máy ảo VMWare:
+- File -> Open -> C:\VMWareTemplates\ -> chọn File: CentOs7 -> Open
+- Hiện popup -> Điền tên máy ảo ở trên, ở dưới dẫn đến đường dẫn lưu máy ảo
+- Sau khi vmware đã import xong templates thì chọn máy tương ứng với tên mới tạo trong danh sách máy bên tay trái
+- Để khởi động máy ảo ấn vào nút: Power on this vitual machine
+- Khi bật có thể hiện popup gì đó -> ấn Next
+- Nhập mật khẩu đăng nhập vào hệ thống
++ user/pass: root/12345678 , centos/centos
+- ấn vào Taskbar góc trên bên phái màn hình
+- Chọn Wired Connected -> Wired Settings
+- Ở Group Wired -> ấn vào nút bánh răng cưa
+- IPv4 -> Manual
+- Nhập địa chỉ IP Ví dụ: 192.168.1.2xx, NetMask: 255.255.255.0, Gateway: 192.168.1.1
+- Nhập DNS cho máy ảo: 8.8.8.8,8.8.4.4
+- Apply -> Trở lại bảng setting Network -> Ấn vào On trong group Wired để tắt -> Ấn thêm lần nữa để bật lại. Việc này nhằm khởi động lại network để nhận cấu hình mạng mới
+- Ra cửa sổ màn hình -> chuột phải -> open terminal -> gõ ip a -> enter -> kiểm tra thấy địa chỉ ip đã đúng như cấu hình ở trên là được
+- Gửi địa chỉ ip, tài khoản root cho dev để làm việc
+
+Hướng dẫn take snapshoot để backup khi cài đặt server có thể revert khi gặp lỗi:
+- Trước khi tiến hành cài đặt thì chuột phải vào tên của máy ảo trên task bar của vmware
+- Snapshot -> Take Snapshoot -> Điền tên và mô tả -> Enter hoặc click vào Take Snapshoot
+
+Revert lại snap shoot
+- Snapshot -> Snapshoot Manager -> Chọn phiên bản muốn revert sau đó đợi hệ thống vmware revert lại và dùng như bình thường

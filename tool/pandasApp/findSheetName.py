@@ -5,7 +5,7 @@ import pandas as pd
 folder_path = 'D:\\Open Game\\Huy - AFK tam quốc\\release'
 
 # Tên sheet cần tìm
-sheet_name_to_find = '英雄进阶'
+sheet_name_to_find = '神龙基础'
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):

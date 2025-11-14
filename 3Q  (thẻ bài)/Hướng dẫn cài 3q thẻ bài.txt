@@ -32,6 +32,10 @@ Vào aapanel chọn Security -> Turn off Firewall
 
 3.tải file data.zip lên server rồi giải nén
 
+cd /
+unzip data.zip
+unzip usr.zip
+
 Cấp Quyền:
 
 chmod -R 755 /usr
