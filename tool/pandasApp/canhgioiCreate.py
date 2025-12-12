@@ -15,19 +15,19 @@ def replace_skills(base_string, skill_replacements):
 
 # Nhập các biến cần thay thế
 skill_replacements = {
-    "LV4-SKILL2": "50060240",
-    "LV5-SKILL2": "50060250",
-    "LV6-SKILL2": "50060260",
-    "LV1-SKILL5": "50090900",
-    "LV2-SKILL5": "50090910",
-    "LV3-SKILL5": "50090920",
-    "LV4-SKILL5": "50090930",
-    "LV5-SKILL5": "50090940",
-    "LV6-SKILL5": "50090950",
-    "LV7-SKILL5": "50090960",
-    "LV8-SKILL5": "50090970",
-    "LV9-SKILL5": "50090980",
-    "LV10-SKILL5": "50090990",  # Đảm bảo LV10-SKILL5 có trong danh sách thay thế
+    "LV4-SKILL2": "99080240",
+    "LV5-SKILL2": "99080250",
+    "LV6-SKILL2": "99080260",
+    "LV1-SKILL5": "99081100",
+    "LV2-SKILL5": "99081110",
+    "LV3-SKILL5": "99081120",
+    "LV4-SKILL5": "99081130",
+    "LV5-SKILL5": "99081140",
+    "LV6-SKILL5": "99081150",
+    "LV7-SKILL5": "99081160",
+    "LV8-SKILL5": "99081170",
+    "LV9-SKILL5": "99081180",
+    "LV10-SKILL5": "99081190",  # Đảm bảo LV10-SKILL5 có trong danh sách thay thế
 }
 
 # Gọi hàm và in kết quả

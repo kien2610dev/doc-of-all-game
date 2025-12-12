@@ -1,0 +1,278 @@
+========================================================================
+
+  HƯỚNG DẪN CÀI ĐẶT BY SOURCEGAME.VN - YÊU CẦU HỆ ĐIỀU HÀNH CENTOS7.
+
+========================================================================
+
+Đầu tiên cài đặt aaapanel:
+URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en.sh "$URL";fi;bash install_7.0_en.sh aapanel
+
+-> Nhập y và Enter
+
+Sau đó chạy lệnh tắt ssl:
+rm -f /www/server/panel/data/ssl.pl && /etc/init.d/bt restart
+
+Chạy lệnh: bt 14
+
+Lưu thông tin rồi đăng nhập vào aaapanel cài:
+Nginx-1.20
+MySQL-5.7
+PHP-5.6
+
+========================================================================
+
+Đặt pass databases về: dbpassNguBanew
+
+Vào aapanel chọn Databases -> Root password -> ghi dbpassNguBanew rồi Confirm
+
+========================================================================
+
+Mở port: 1-65535
+
+Vào aapanel chọn Security -> Port rule -> Add Port Rule -> dòng Port ghi 1-65535 rồi Confirm
+
+========================================================================
+
+2. Tải file
+
+- Upload FILE sourcegamevn.zip lên thư mục gốc vps
+
+Xong rồi chạy lệnh giải nén:
+
+cd /
+unzip sourcegamevn.zip
+
+========================================================================
+
+Chạy lệnh cấp quyền 777:
+
+chmod -R 755 /usr
+chmod -R 777 /data/
+
+========================================================================
+
+Edit file etc/profile (thêm all vào ở dòng cuối file)
+
+export JAVA_HOME=/usr/local/jdk
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=$PATH:/usr/local/erlang/bin
+export PATH=$PATH:/usr/local/rabbitmq/sbin
+export PATH=$PATH:/usr/local/mongodb/bin
+
+========================================================================
+
+Xong chạy lệnh:
+
+source /etc/profile
+
+========================================================================
+
+Chạy từng lệnh cài đặt:
+
+yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel
+
+cd /usr/local
+tar zxf otp_src_24.2.tar.gz 
+
+mkdir -p /usr/local/erlang
+
+cd otp_src_24.2
+./configure --prefix=/usr/local/erlang
+
+make && make install
+
+cd /usr/local
+tar xf rabbitmq-server-generic-unix-3.9.14.tar.xz
+
+mv rabbitmq_server-3.9.14 rabbitmq
+
+source /etc/profile
+
+rabbitmq-plugins enable rabbitmq_management
+
+rabbitmq-server -detached
+
+rabbitmqctl add_user admin mqpassNguBanew
+
+rabbitmqctl set_user_tags admin administrator
+
+rabbitmqctl list_users
+
+rabbitmqctl change_password admin mqpassNguBanew
+
+rabbitmqctl add_user admin mqpassNguBanew
+
+rabbitmqctl change_password admin mqpassNguBanew
+
+rabbitmqctl set_user_tags admin administrator
+
+========================================================================
+
+http://ip:15672
+
+tài khoản： admin
+mật khẩu： mqpassNguBanew
+
+Click admin xóa guest
+Ấn vào admin：
+Set topic permission và Set permission
+
+========================================================================
+
+- Chạy lệnh cài mongo:
+
+cd /usr/local/
+tar zxf mongodb-linux-x86_64-rhel70-5.0.6.tgz
+
+mv mongodb-linux-x86_64-rhel70-5.0.6 mongodb
+
+mkdir -p /usr/local/mongodb/data/
+
+mkdir -p /usr/local/mongodb/logs/
+
+chmod -R 777 /usr/local
+
+- Bật mongo:
+
+mongod -f /usr/local/mongodb/mongodb.conf
+
+- Xong chạy lệnh:
+
+netstat -nltp
+
+Xem thấy port 27017 lên là done
+
+- Lệnh tắt mongo:
+mongod --shutdown --dbpath /usr/local/mongodb/data --port 27017
+
+========================================================================
+
+- Chạy lệnh connect mongo:
+
+mongo
+use admin
+db.createUser({user:"abc123",pwd:"mongopassNguBanew",roles:["root"]})
+exit
+
+
+P/S: Cái tcg.sql có thể import rồi sửa ip từng table bên dưới
+cloud_device
+cloud_mongo
+cloud_mq
+cloud_mysql
+srv_cross
+srv_group_device
+srv_game
+srv_login
+
+========================================================================
+
+- Edit config:
+
+- Sửa các file bên dưới tienkiem3d.com về tên miền của bạn:
+/home/web/api/config.php
+/home/web/api/includes/utils.php
+/home/web/game/source/index.js
+/home/web/game/source/js/bundle.js
+
+- Sửa các file bên dưới 157.66.81.76 về ip vps của bạn:
+/h5/server/console/store/global.conf.json
+/home/web/game/source/admin/static/js/main.da770e7e.chunk.js
+/home/web/game/source/srv/yzx.out.js
+
+- fhj5675fghgfrhr.js - sửa tên miền trong này về miền của bạn 
+Sau đó kéo file đè vào file trên vps
+/home/web/game/source/libs/
+
+- Sau đó vào Aapanel restart Nginx
+
+========================================================================
+
+- Xong chạy lệnh:
+
+cd /
+source /etc/profile
+
+========================================================================
+
+Tạo Website (Quay lại Aapanel -> Website -> Add site)
+
+MIỀN:80
+/home/web/
+
+Tạo xong ấn vào website vừa tạo chọn URL rewrite và thêm 3 đoạn bên dưới vào
+
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+========================================================================
+
+Lệnh start server:
+
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+
+cd /data/game && ./start.sh
+
+
+Lệnh stop server:
+
+cd /data/game && ./stop.sh
+
+========================================================================
+
+P/S:
+
+Để cấp quyền admin connect vào MySQL chọn WEB -> ny_auth -> Cột type điền số 2 là lên admin
+Xong đăng nhập vào web game rồi chọn avatar xong ấn chữ ADMIN để vào Panel
+
+Sửa nội dung trong bảng thông báo ở tcg -> gm_announce
+
+Chỉnh auto nạp card vào http://muabanthe.top/ tạo tk
+Tạo xong đăng nhập rồi vào ấn chọn </> Tài Liệu API
+Coppy đoạn API key quay về Admin Panel chọn Cài Đặt -> Thẻ Cào -> Dán Vào
+Đoạn URL CALLBACK CARD thì ghi http://Miền/api/payment/card/callback.php
+
+Xong mở vps lên vào /home/web/api/payment/card/index.php sửa lại thành http://muabanthe.top/API/NapThe
+Vậy là xong nạp card tự động
+
+========================================================================
+
+
+- Hướng dẫn bật chat ở web
+
+Chạy từng lệnh:
+
+yum install nodejs
+
+yum install npm
+
+npm -v
+
+node -v
+
+Xong quay lại Aapanel chọn -> App Store -> Node.js version manager 2.2 -> Cài v14.17.6
+Vào /home/web/api/config.php --> mở lên sửa dòng 8 về -> define('SOCKET_URL', 'http://ipvps:5000');
+
+Xong quay lại Aapanel chọn -> Node Project -> Add Node project -> Xem điền theo ảnh -> Setup Nodejs Chat.jpg
+
+- Xong chạy 2 lệnh:
+
+cd /home/web/api
+netstat -tulpn
+
+xem port 5000 lên chưa
+
+========================================================================
+
+Tut gộp server (cái này tặng thêm ae tự nghiên cứu nhé)
+
+chmod -R 777 /etc/
+
+Chạy lệnh backup db s2:
+mongodump -u 'abc123' -p 'mongopassNguBanew' --authenticationDatabase=admin --db game-s2 --out /root/dumps2
+
+Insert db s2 đó vào s1
+mongorestore -u 'abc123' -mongopassNguBanew' --authenticationDatabase=admin --db 'game-s1' /root/dumps2/game-s2

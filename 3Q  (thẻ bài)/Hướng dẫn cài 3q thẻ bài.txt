@@ -42,7 +42,7 @@ chmod -R 755 /usr
 chmod -R 777 /www/wwwroot/
 chmod -R 777 /data/
 
-Đổi Pas DB trực tiếp：EHrWXkpA30e6f7CQx2cx
+Đổi Pas DB trực tiếp：dvtgame3QTB
 
 ==================================================================================
 
@@ -91,12 +91,12 @@ source /etc/profile
 
 rabbitmq-plugins enable rabbitmq_management
 rabbitmq-server -detached
-rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl add_user admin dvtgame3QTB
 rabbitmqctl set_user_tags admin administrator
 
 rabbitmq-plugins enable rabbitmq_management
 rabbitmq-server -detached
-rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl add_user admin dvtgame3QTB
 rabbitmqctl set_user_tags admin administrator
 
 ===============================================================================================
@@ -106,7 +106,7 @@ Vào rabbit với đường dẫn sau:
 http://IP:15672
 
 tk： admin
-mk： Abc123456...a
+mk： dvtgame3QTB
 
 Click vào Admin ấn chọn guest
 Kéo xuống bên dưới ấn nút Delete this user
@@ -179,16 +179,16 @@ Cài đặt mongo:
 
 mongo
 use admin
-db.createUser({user:"abc123",pwd:"Abc123321123",roles:["root"]})
+db.createUser({user:"abc123",pwd:"dvtgame3QTB",roles:["root"]})
 exit
 
-mysql -u root -pEHrWXkpA30e6f7CQx2cx
+mysql -u root -pdvtgame3QTB
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'EHrWXkpA30e6f7CQx2cx' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'dvtgame3QTB' WITH GRANT OPTION;
 FLUSH   PRIVILEGES;
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'EHrWXkpA30e6f7CQx2cx' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'dvtgame3QTB' WITH GRANT OPTION;
 FLUSH   PRIVILEGES;
-grant all privileges on *.* to 'root'@'%' identified by 'EHrWXkpA30e6f7CQx2cx';
+grant all privileges on *.* to 'root'@'%' identified by 'dvtgame3QTB';
 quit
 
 ===============================================================================================
@@ -287,7 +287,7 @@ xóa hết thông tin ở account_master
 	reboot
 	mongod -f /usr/local/mongodb/mongodb.conf
 
-	mongo -u "abc123" -p "Abc123321123" --authenticationDatabase "admin"
+	mongo -u "abc123" -p "dvtgame3QTB" --authenticationDatabase "admin"
 	db.adminCommand({ listDatabases: 1 }).databases.forEach(function(database) {
  	   db.getSiblingDB(database.name).dropDatabase();
 	});

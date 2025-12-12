@@ -4,7 +4,6 @@
 循环活动表二 - Yamato (ngọc tuần thẻ- sheet 9 -> 11).中元夜
 符文周卡 - Tướng 13 (Haki tuần thẻ).
 兽魂祈祷UP - Ngọc (Ngọc UP - Nâng cấp ngọc).
-超值首充 - Siêu nạp.
 寻宝 - Vòng quay.
 跨服充值排行 - BXH nạp liên sv.
 暑期狂欢 - Hoa xuân.
@@ -29,15 +28,36 @@ Bách Trửu - comming soon...
 循环商城-shop trong cac sk (sheet 3).
 物品表-item
 限定英雄召唤- sk quay tướng
-
-----chưa mở----
+红包雨- sk lì xì
 新英雄上新活动 - Thí luyện.
 跨服元宝排行 - BXH tiêu.
-
+任务-các gói tích nạp
 通用-id chức năng
 充值项-giá các gói mua
-
+圣域-thần ký
 充值项-gói mua thần long
 vip商城/七日登录 - gói vip(Nạp)
+超级转盘-sk vòng quay
 
+
+-------Tướng-----------
+战斗(sheet1-vị trí xếp doi hinh)
+战斗-buff kĩ năng
+藏品-tàng phẩm + nội tại
+英雄羁绊-phúc tướng
+仙器-tiên khí
+文本语言表-text hiển thị
+英雄-sao tướng + kĩ năng tướng
+境界-cảnh giới
 1-dame 2-magic 3-tank 4-buff
+
+1003-công kích - dame
+1001-sinh mệnh - máu
+7- bạo kích - chí mạng
+28-giảm sát thương chí mạng
+
+-------Ải-----------
+实例-lung linh tháp (quái vat)
+通天塔-lung lunh tháp (tầng)
+冒险-chinh chiến
+无尽试炼-vô tận luân hồi

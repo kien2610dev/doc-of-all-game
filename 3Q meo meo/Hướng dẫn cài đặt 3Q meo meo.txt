@@ -1,0 +1,85 @@
+URL=https://loliteam.net/install_7.0_en_pro.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en_pro.sh "$URL";fi;bash install_7.0_en_pro.sh aapanel
+
+- Cài đặt môi trường:
+Nginx 1.22
+MySQL 5.6
+PHP 7.4 – cài extension: ionCube + memcache → reload config → restart PHP
+Docker engine
+Elasticsearch
+Linux Toolbox – Setting → Swap/Virtual memory: 5120 (tuỳ cấu hình server)
+
+- Mở port Firewall
+Cần mở các port: 80, 81, 82, 8192, 8193, 9200, 10001, 10002
+
+- Upload & giải nén server:
+Server-MeoMeo-Eopi.zip vào thư mục /
+cd / && unzip Server-MeoMeo-Eopi.zip
+
+- Sửa file cấu hình Nginx:
+/www/server/panel/vhost/nginx/127.0.0.1.conf
+thay meomeo.jx2jaya.com bằng IP hoặc domain của bạn.
+
+chạy lệnh :
+/etc/init.d/nginx restart
+chmod -R 777 /data
+chmod -R 777 /www/wwwroot/game
+
+- Sửa IP server:
+Thay IP 36.50.134.243 trong các file sau
+/data/sql/cat_center.sql
+/data/sql/game_admin.sql
+/www/wwwroot/game/index.php
+
+- Cấu hình domain (nếu cần):
+file /www/wwwroot/game/index.php 
+Thay meomeo.jx2jaya.com bằng domain của bạn.
+aaPanel → Website → Add site
+Domain: nhập domain
+Website Path: /www/wwwroot/game
+
+- Đổi mật khẩu DB thành: 123456
+cd /data/sql && ./add-dtb.sh
+
+- Cài MongoDB:
+Import image --> Docker → Local image → Import image --> Path:/data/3qmeomeo-mongo40-eopi.tar --> Confirm
+
+Tạo container --> Docker → Container → Create Container → Command create --> Nhập lệnh (một dòng):docker run -d --name mongo40 -p 127.0.0.1:27017:27017 -v /data/mongo40:/data/db mongo:4.0.28 --bind_ip_all --> Execute command
+
+Kiểm tra container --> netstat -tulpn --> Nếu thấy port 27017 --> OK
+
+- Sửa Backend API:
+Software Store → elasticsearch → 权限 → Copy mật khẩu 管理员密码 vào file cấu hình backend: (dòng 56) của file /data/gmhoutai/gameadmin/.env
+
+Đổi cả thông tin tài khoản admin và mật khẩu 123456 trước khi lưu lại
+
+Software Store → elasticsearch → 配置文件 → Tìm: xpack.security.http.ssl: → Đổi enabled: true → enabled: false → Save
+
+- Lệnh chạy server và chạy liên server:
+cd /data/server/bin && ./run.sh
+
+cd /data/cross/bin && ./run.sh
+
+- Lệnh tắt server (server) và tắt liên server (cross):
+cd /data/server/bin && ./stop.sh
+
+cd /data/cross/bin && ./stop.sh
+
+- Đường dẫn game & backend:
+Game:
+http://IP:81
+— nếu có domain:
+http://tenmien.com
+Android client: thay IP
+36.50.134.243
+tại
+\assets\apps\H59BB7BF3\www\manifest.json
+GM Backend:
+http://IP:81/QuanTriVip/gm.php
+— GM code: ThuongEopi
+User Backend:
+http://IP:81/gm
+Admin Backend:
+http://IP:82/module/login.php
+— Tài khoản: admin — Mật khẩu: 123456
+⚔️ Bật các tính năng đấu trường & liên server:
+Đăng nhập Admin backend port 82 → Menu trái → Sửa thời gian mở server → Chọn ngày giờ → Bấm nút cài đặt!
