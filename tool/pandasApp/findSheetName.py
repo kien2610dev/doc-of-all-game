@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # Đường dẫn đến thư mục chứa các file Excel
-folder_path = 'D:\\Open Game\\a Trung - Tam quốc chiến\\release'
+folder_path = 'D:\\Open Game\\a Trung - Kho báu hải tặc\\release'
 
 # Tên sheet cần tìm
-sheet_name_to_find = '天界迷宫格子类型'
+sheet_name_to_find = '商店信息'
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):

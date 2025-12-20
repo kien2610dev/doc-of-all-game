@@ -1,0 +1,28 @@
+// DB nguồn và DB đích
+const sourceDB = db.getSiblingDB("cat_xhy_S110002");
+const targetDB = db.getSiblingDB("cat_xhy_S110001");
+
+const collections = ["char", "common", "friend", "mail", "union"];
+
+collections.forEach(colName => {
+    print("Copy collection:", colName);
+
+    const sourceCol = sourceDB.getCollection(colName);
+    const targetCol = targetDB.getCollection(colName);
+
+    const cursor = sourceCol.find();
+    let count = 0;
+
+    cursor.forEach(doc => {
+        try {
+            targetCol.insertOne(doc);
+            count++;
+        } catch (e) {
+            if (e.code !== 11000) {
+                print("Error:", e);
+            }
+        }
+    });
+
+    print(`Done ${colName}, copied ${count} documents`);
+});
