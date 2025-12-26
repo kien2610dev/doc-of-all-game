@@ -61,3 +61,4 @@ vip商城/七日登录 - gói vip(Nạp)
 通天塔-lung lunh tháp (tầng)
 冒险-chinh chiến
 无尽试炼-vô tận luân hồi
+天界迷宫-thế giới mê cung

@@ -5,7 +5,7 @@ import pandas as pd
 folder_path = 'D:\\Open Game\\a Trung - Kho báu hải tặc\\release'
 
 # Tên sheet cần tìm
-sheet_name_to_find = '商店信息'
+sheet_name_to_find = '藏品推荐'
 
 # Duyệt qua tất cả các file trong thư mục
 for filename in os.listdir(folder_path):
