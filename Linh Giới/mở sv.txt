@@ -1,0 +1,74 @@
+mkdir /data/game_s2
+cp -a /data/game_s1/* /data/game_s2/
+mkdir /data/web/game_server/2
+cp -a /data/web/game_server/1/* /data/web/game_server/2/
+cd /data/game_s2/script
+sed -i 's/\r$//' start.sh
+
+clone thư mục /data/game_s1 sang /data/game_s2
+sửa file /data/game_s2/config/cls.config
+dòng 9,44,48,50,52
+/data/game_s2/config/gsrv.app
+dòng 16
+/data/game_s2/config/gsrv.config
+dòng 45,57,58,74,75,76,78
+/data/game_s2/game_run.ini
+dòng 5,6,7,8,10,13,19,21,24,26,27,28,30
+/data/game_s2/script/start.sh
+dòng 6,19,20,25
+
+clone thư mục 1 sang 2 trong /data/web/game_server
+sửa 
+/data/web/game_server/config/db_game.php
+dòng 8
+/data/web/game_server/config/security.php
+dòng 10,11
+Vào database tạo 2 database khác là game_s2 , execute từ database game_s1 trắng thông tin ban đầu( có thể lấy trong /data/sql)
+Clone 1 máy chủ mới trong game_server của database jzy_registercn
+ vào file /data/web/regcnyyhx.suyougame.cn/logs/server_qudaolj.json.cfg.a263 để thêm 1 bản ghi nữa cho s2
+ví dụ như này 
+{
+  "1": {
+    "id": "1",
+    "num": "1",
+    "status": "1",
+    "state": "0",
+    "area": "263",
+    "area_num": "6",
+    "closed": "0",
+    "close_desc": "",
+    "belong": "jzy_sh921_test_PM002704,yy_sh921_lj_57_PM001257,yy_sh921_lj_chengzi_PM001388,yy_sh921_lj_PM001074,yy_sh921_lj_PM001514,yy_sh921_lj_PM001744",
+    "belong_id": "34",
+    "realm": "0",
+    "isreview": "0",
+    "otime": "1746028800",
+    "name": "S1"
+  },
+  "2": {
+    "id": "2",
+    "num": "2",
+    "status": "1",
+    "state": "0",
+    "area": "263",
+    "area_num": "6",
+    "closed": "0",
+    "close_desc": "",
+  "belong": "jzy_sh921_test_PM002704,yy_sh921_lj_57_PM001257,yy_sh921_lj_chengzi_PM001388,yy_sh921_lj_PM001074,yy_sh921_lj_PM001514,yy_sh921_lj_PM001744",
+    "belong_id": "34",
+    "realm": "0",
+    "isreview": "0",
+    "otime": "1753981200",
+    "name": "S2"
+  }
+}
+
+thêm check port cho server tại file /data/web/regcnyyhx.suyougame.cn/control/api.ctrl.php từ dòng 969
+
+chạy lệnh  
+cd /data/game_s2/script && sh start.sh
+
+check server dang chay
+screen -ls | grep -o '[0-9]\{1,\}\.[0-9a-zA-Z_-]*'
+
+tat sv dang chay
+screen -S {id process} -X quit

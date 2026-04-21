@@ -1,0 +1,241 @@
+INSERT IGNORE INTO xkm_server_1064.announce SELECT * FROM xkm_server_1065.announce;
+INSERT IGNORE INTO xkm_server_1064.auction_data SELECT * FROM xkm_server_1065.auction_data;
+INSERT IGNORE INTO xkm_server_1064.auction_item_data SELECT * FROM xkm_server_1065.auction_item_data;
+INSERT IGNORE INTO xkm_server_1064.auction_log SELECT * FROM xkm_server_1065.auction_log;
+INSERT IGNORE INTO xkm_server_1064.boss_box SELECT * FROM xkm_server_1065.boss_box;
+INSERT IGNORE INTO xkm_server_1064.boss_first_reward_record SELECT * FROM xkm_server_1065.boss_first_reward_record;
+INSERT IGNORE INTO xkm_server_1064.boss_refresh_warn SELECT * FROM xkm_server_1065.boss_refresh_warn;
+INSERT IGNORE INTO xkm_server_1064.boss_tiaozhan_refresh SELECT * FROM xkm_server_1065.boss_tiaozhan_refresh;
+INSERT IGNORE INTO xkm_server_1064.common_roll SELECT * FROM xkm_server_1065.common_roll;
+INSERT IGNORE INTO xkm_server_1064.common_roll_record SELECT * FROM xkm_server_1065.common_roll_record;
+INSERT IGNORE INTO xkm_server_1064.common_show SELECT * FROM xkm_server_1065.common_show;
+INSERT IGNORE INTO xkm_server_1064.common_zhuanpan SELECT * FROM xkm_server_1065.common_zhuanpan;
+INSERT IGNORE INTO xkm_server_1064.discount_goods SELECT * FROM xkm_server_1065.discount_goods;
+INSERT IGNORE INTO xkm_server_1064.feedback SELECT * FROM xkm_server_1065.feedback;
+INSERT IGNORE INTO xkm_server_1064.feedbackReply SELECT * FROM xkm_server_1065.feedbackReply;
+INSERT IGNORE INTO xkm_server_1064.global_drop_goods SELECT * FROM xkm_server_1065.global_drop_goods;
+INSERT IGNORE INTO xkm_server_1064.guild SELECT * FROM xkm_server_1065.guild;
+INSERT IGNORE INTO xkm_server_1064.guild_boss_record SELECT * FROM xkm_server_1065.guild_boss_record;
+INSERT IGNORE INTO xkm_server_1064.guild_donate_record SELECT * FROM xkm_server_1065.guild_donate_record;
+INSERT IGNORE INTO xkm_server_1064.guild_member SELECT * FROM xkm_server_1065.guild_member;
+INSERT IGNORE INTO xkm_server_1064.houtai_data SELECT * FROM xkm_server_1065.houtai_data;
+INSERT IGNORE INTO xkm_server_1064.huobi_libao SELECT * FROM xkm_server_1065.huobi_libao;
+INSERT IGNORE INTO xkm_server_1064.item SELECT * FROM xkm_server_1065.item;
+INSERT IGNORE INTO xkm_server_1064.jiutianmibao SELECT * FROM xkm_server_1065.jiutianmibao;
+INSERT IGNORE INTO xkm_server_1064.mail SELECT * FROM xkm_server_1065.mail;
+INSERT IGNORE INTO xkm_server_1064.mingge_info SELECT * FROM xkm_server_1065.mingge_info;
+INSERT IGNORE INTO xkm_server_1064.oldplay_backreward SELECT * FROM xkm_server_1065.oldplay_backreward;
+INSERT IGNORE INTO xkm_server_1064.op_activity_copy SELECT * FROM xkm_server_1065.op_activity_copy;
+INSERT IGNORE INTO xkm_server_1064.op_activity_duihuan SELECT * FROM xkm_server_1065.op_activity_duihuan;
+INSERT IGNORE INTO xkm_server_1064.op_activity_target SELECT * FROM xkm_server_1065.op_activity_target;
+INSERT IGNORE INTO xkm_server_1064.rank_record SELECT * FROM xkm_server_1065.rank_record;
+INSERT IGNORE INTO xkm_server_1064.recharge_record SELECT * FROM xkm_server_1065.recharge_record;
+INSERT IGNORE INTO xkm_server_1064.role SELECT * FROM xkm_server_1065.role;
+INSERT IGNORE INTO xkm_server_1064.role_baGua SELECT * FROM xkm_server_1065.role_baGua;
+INSERT IGNORE INTO xkm_server_1064.role_bag_dummy SELECT * FROM xkm_server_1065.role_bag_dummy;
+INSERT IGNORE INTO xkm_server_1064.role_bag_state SELECT * FROM xkm_server_1065.role_bag_state;
+INSERT IGNORE INTO xkm_server_1064.role_bao_shi SELECT * FROM xkm_server_1065.role_bao_shi;
+INSERT IGNORE INTO xkm_server_1064.role_biance SELECT * FROM xkm_server_1065.role_biance;
+INSERT IGNORE INTO xkm_server_1064.role_bingFa SELECT * FROM xkm_server_1065.role_bingFa;
+INSERT IGNORE INTO xkm_server_1064.role_bingfu SELECT * FROM xkm_server_1065.role_bingfu;
+INSERT IGNORE INTO xkm_server_1064.role_boss_jindi SELECT * FROM xkm_server_1065.role_boss_jindi;
+INSERT IGNORE INTO xkm_server_1064.role_boss_tiaozhan SELECT * FROM xkm_server_1065.role_boss_tiaozhan;
+INSERT IGNORE INTO xkm_server_1064.role_buycard_activity SELECT * FROM xkm_server_1065.role_buycard_activity;
+INSERT IGNORE INTO xkm_server_1064.role_caishenling SELECT * FROM xkm_server_1065.role_caishenling;
+INSERT IGNORE INTO xkm_server_1064.role_chengjiu SELECT * FROM xkm_server_1065.role_chengjiu;
+INSERT IGNORE INTO xkm_server_1064.role_chuanshi_roll SELECT * FROM xkm_server_1065.role_chuanshi_roll;
+INSERT IGNORE INTO xkm_server_1064.role_common_target SELECT * FROM xkm_server_1065.role_common_target;
+INSERT IGNORE INTO xkm_server_1064.role_custom_data SELECT * FROM xkm_server_1065.role_custom_data;
+INSERT IGNORE INTO xkm_server_1064.role_daily_signin SELECT * FROM xkm_server_1065.role_daily_signin;
+INSERT IGNORE INTO xkm_server_1064.role_daoju_use SELECT * FROM xkm_server_1065.role_daoju_use;
+INSERT IGNORE INTO xkm_server_1064.role_data SELECT * FROM xkm_server_1065.role_data;
+INSERT IGNORE INTO xkm_server_1064.role_data_distribution SELECT * FROM xkm_server_1065.role_data_distribution;
+INSERT IGNORE INTO xkm_server_1064.role_decr_account SELECT * FROM xkm_server_1065.role_decr_account;
+INSERT IGNORE INTO xkm_server_1064.role_dianfeng SELECT * FROM xkm_server_1065.role_dianfeng;
+INSERT IGNORE INTO xkm_server_1064.role_discount SELECT * FROM xkm_server_1065.role_discount;
+INSERT IGNORE INTO xkm_server_1064.role_douyingame SELECT * FROM xkm_server_1065.role_douyingame;
+INSERT IGNORE INTO xkm_server_1064.role_drop_goods_limit SELECT * FROM xkm_server_1065.role_drop_goods_limit;
+INSERT IGNORE INTO xkm_server_1064.role_equip_gongming SELECT * FROM xkm_server_1065.role_equip_gongming;
+INSERT IGNORE INTO xkm_server_1064.role_equip_qianghua SELECT * FROM xkm_server_1065.role_equip_qianghua;
+INSERT IGNORE INTO xkm_server_1064.role_equip_shenzhu SELECT * FROM xkm_server_1065.role_equip_shenzhu;
+INSERT IGNORE INTO xkm_server_1064.role_fabao SELECT * FROM xkm_server_1065.role_fabao;
+INSERT IGNORE INTO xkm_server_1064.role_fabao_fuben SELECT * FROM xkm_server_1065.role_fabao_fuben;
+INSERT IGNORE INTO xkm_server_1064.role_faxiang SELECT * FROM xkm_server_1065.role_faxiang;
+INSERT IGNORE INTO xkm_server_1064.role_fenjie_settings SELECT * FROM xkm_server_1065.role_fenjie_settings;
+INSERT IGNORE INTO xkm_server_1064.role_fetter SELECT * FROM xkm_server_1065.role_fetter;
+INSERT IGNORE INTO xkm_server_1064.role_fuliguan SELECT * FROM xkm_server_1065.role_fuliguan;
+INSERT IGNORE INTO xkm_server_1064.role_gerenfuben SELECT * FROM xkm_server_1065.role_gerenfuben;
+INSERT IGNORE INTO xkm_server_1064.role_gift_code SELECT * FROM xkm_server_1065.role_gift_code;
+INSERT IGNORE INTO xkm_server_1064.role_god_token SELECT * FROM xkm_server_1065.role_god_token;
+INSERT IGNORE INTO xkm_server_1064.role_godcopy SELECT * FROM xkm_server_1065.role_godcopy;
+INSERT IGNORE INTO xkm_server_1064.role_guan_qia SELECT * FROM xkm_server_1065.role_guan_qia;
+INSERT IGNORE INTO xkm_server_1064.role_guanggao SELECT * FROM xkm_server_1065.role_guanggao;
+INSERT IGNORE INTO xkm_server_1064.role_guide SELECT * FROM xkm_server_1065.role_guide;
+INSERT IGNORE INTO xkm_server_1064.role_guild_shenshou SELECT * FROM xkm_server_1065.role_guild_shenshou;
+INSERT IGNORE INTO xkm_server_1064.role_gvg SELECT * FROM xkm_server_1065.role_gvg;
+INSERT IGNORE INTO xkm_server_1064.role_heji SELECT * FROM xkm_server_1065.role_heji;
+INSERT IGNORE INTO xkm_server_1064.role_huanhua SELECT * FROM xkm_server_1065.role_huanhua;
+INSERT IGNORE INTO xkm_server_1064.role_huigui_huodong SELECT * FROM xkm_server_1065.role_huigui_huodong;
+INSERT IGNORE INTO xkm_server_1064.role_husong SELECT * FROM xkm_server_1065.role_husong;
+INSERT IGNORE INTO xkm_server_1064.role_invite_reward_info SELECT * FROM xkm_server_1065.role_invite_reward_info;
+INSERT IGNORE INTO xkm_server_1064.role_jiang_xing SELECT * FROM xkm_server_1065.role_jiang_xing;
+INSERT IGNORE INTO xkm_server_1064.role_jiayuanjitan SELECT * FROM xkm_server_1065.role_jiayuanjitan;
+INSERT IGNORE INTO xkm_server_1064.role_jiayuanlianhun SELECT * FROM xkm_server_1065.role_jiayuanlianhun;
+INSERT IGNORE INTO xkm_server_1064.role_jiayuanrenwu SELECT * FROM xkm_server_1065.role_jiayuanrenwu;
+INSERT IGNORE INTO xkm_server_1064.role_jingji SELECT * FROM xkm_server_1065.role_jingji;
+INSERT IGNORE INTO xkm_server_1064.role_jingji_log SELECT * FROM xkm_server_1065.role_jingji_log;
+INSERT IGNORE INTO xkm_server_1064.role_jinjieri SELECT * FROM xkm_server_1065.role_jinjieri;
+INSERT IGNORE INTO xkm_server_1064.role_lianchong SELECT * FROM xkm_server_1065.role_lianchong;
+INSERT IGNORE INTO xkm_server_1064.role_liandanlu SELECT * FROM xkm_server_1065.role_liandanlu;
+INSERT IGNORE INTO xkm_server_1064.role_liangxinka SELECT * FROM xkm_server_1065.role_liangxinka;
+INSERT IGNORE INTO xkm_server_1064.role_lianxuchongzhi SELECT * FROM xkm_server_1065.role_lianxuchongzhi;
+INSERT IGNORE INTO xkm_server_1064.role_liaotiankuang SELECT * FROM xkm_server_1065.role_liaotiankuang;
+INSERT IGNORE INTO xkm_server_1064.role_libao_activity SELECT * FROM xkm_server_1065.role_libao_activity;
+INSERT IGNORE INTO xkm_server_1064.role_login14day SELECT * FROM xkm_server_1065.role_login14day;
+INSERT IGNORE INTO xkm_server_1064.role_login_time SELECT * FROM xkm_server_1065.role_login_time;
+INSERT IGNORE INTO xkm_server_1064.role_lunhuimijing SELECT * FROM xkm_server_1065.role_lunhuimijing;
+INSERT IGNORE INTO xkm_server_1064.role_mall_buy SELECT * FROM xkm_server_1065.role_mall_buy;
+INSERT IGNORE INTO xkm_server_1064.role_marry SELECT * FROM xkm_server_1065.role_marry;
+INSERT IGNORE INTO xkm_server_1064.role_marry_arena SELECT * FROM xkm_server_1065.role_marry_arena;
+INSERT IGNORE INTO xkm_server_1064.role_marry_jianZheng SELECT * FROM xkm_server_1065.role_marry_jianZheng;
+INSERT IGNORE INTO xkm_server_1064.role_marry_meili SELECT * FROM xkm_server_1065.role_marry_meili;
+INSERT IGNORE INTO xkm_server_1064.role_marrycopy SELECT * FROM xkm_server_1065.role_marrycopy;
+INSERT IGNORE INTO xkm_server_1064.role_mary_task SELECT * FROM xkm_server_1065.role_mary_task;
+INSERT IGNORE INTO xkm_server_1064.role_meiridangkou SELECT * FROM xkm_server_1065.role_meiridangkou;
+INSERT IGNORE INTO xkm_server_1064.role_mingGe SELECT * FROM xkm_server_1065.role_mingGe;
+INSERT IGNORE INTO xkm_server_1064.role_mingge_roll SELECT * FROM xkm_server_1065.role_mingge_roll;
+INSERT IGNORE INTO xkm_server_1064.role_mingjiang SELECT * FROM xkm_server_1065.role_mingjiang;
+INSERT IGNORE INTO xkm_server_1064.role_mobai SELECT * FROM xkm_server_1065.role_mobai;
+INSERT IGNORE INTO xkm_server_1064.role_nanmanruqin SELECT * FROM xkm_server_1065.role_nanmanruqin;
+INSERT IGNORE INTO xkm_server_1064.role_new_activity SELECT * FROM xkm_server_1065.role_new_activity;
+INSERT IGNORE INTO xkm_server_1064.role_newdiscount SELECT * FROM xkm_server_1065.role_newdiscount;
+INSERT IGNORE INTO xkm_server_1064.role_online_reward SELECT * FROM xkm_server_1065.role_online_reward;
+INSERT IGNORE INTO xkm_server_1064.role_operation_activity SELECT * FROM xkm_server_1065.role_operation_activity;
+INSERT IGNORE INTO xkm_server_1064.role_participation_activity_data SELECT * FROM xkm_server_1065.role_participation_activity_data;
+INSERT IGNORE INTO xkm_server_1064.role_payline_gongming SELECT * FROM xkm_server_1065.role_payline_gongming;
+INSERT IGNORE INTO xkm_server_1064.role_power SELECT * FROM xkm_server_1065.role_power;
+INSERT IGNORE INTO xkm_server_1064.role_power_record SELECT * FROM xkm_server_1065.role_power_record;
+INSERT IGNORE INTO xkm_server_1064.role_prop SELECT * FROM xkm_server_1065.role_prop;
+INSERT IGNORE INTO xkm_server_1064.role_qiannengdan SELECT * FROM xkm_server_1065.role_qiannengdan;
+INSERT IGNORE INTO xkm_server_1064.role_qilinbi SELECT * FROM xkm_server_1065.role_qilinbi;
+INSERT IGNORE INTO xkm_server_1064.role_qu_dao_xu_qiu SELECT * FROM xkm_server_1065.role_qu_dao_xu_qiu;
+INSERT IGNORE INTO xkm_server_1064.role_quanmin_jinjie SELECT * FROM xkm_server_1065.role_quanmin_jinjie;
+INSERT IGNORE INTO xkm_server_1064.role_quanminboss SELECT * FROM xkm_server_1065.role_quanminboss;
+INSERT IGNORE INTO xkm_server_1064.role_quanminchongbang SELECT * FROM xkm_server_1065.role_quanminchongbang;
+INSERT IGNORE INTO xkm_server_1064.role_queen_copy SELECT * FROM xkm_server_1065.role_queen_copy;
+INSERT IGNORE INTO xkm_server_1064.role_random_shop SELECT * FROM xkm_server_1065.role_random_shop;
+INSERT IGNORE INTO xkm_server_1064.role_random_tai_shop SELECT * FROM xkm_server_1065.role_random_tai_shop;
+INSERT IGNORE INTO xkm_server_1064.role_rank_linshi_record SELECT * FROM xkm_server_1065.role_rank_linshi_record;
+INSERT IGNORE INTO xkm_server_1064.role_rank_record SELECT * FROM xkm_server_1065.role_rank_record;
+INSERT IGNORE INTO xkm_server_1064.role_redpaper SELECT * FROM xkm_server_1065.role_redpaper;
+INSERT IGNORE INTO xkm_server_1064.role_redpaper_pool SELECT * FROM xkm_server_1065.role_redpaper_pool;
+INSERT IGNORE INTO xkm_server_1064.role_redpaper_progress SELECT * FROM xkm_server_1065.role_redpaper_progress;
+INSERT IGNORE INTO xkm_server_1064.role_roll_move SELECT * FROM xkm_server_1065.role_roll_move;
+INSERT IGNORE INTO xkm_server_1064.role_ronglu_settings SELECT * FROM xkm_server_1065.role_ronglu_settings;
+INSERT IGNORE INTO xkm_server_1064.role_setting SELECT * FROM xkm_server_1065.role_setting;
+INSERT IGNORE INTO xkm_server_1064.role_shanggushilian SELECT * FROM xkm_server_1065.role_shanggushilian;
+INSERT IGNORE INTO xkm_server_1064.role_shen_jiang SELECT * FROM xkm_server_1065.role_shen_jiang;
+INSERT IGNORE INTO xkm_server_1064.role_shendianboss SELECT * FROM xkm_server_1065.role_shendianboss;
+INSERT IGNORE INTO xkm_server_1064.role_shiti SELECT * FROM xkm_server_1065.role_shiti;
+INSERT IGNORE INTO xkm_server_1064.role_shouchong_tuangou SELECT * FROM xkm_server_1065.role_shouchong_tuangou;
+INSERT IGNORE INTO xkm_server_1064.role_shouchonglibao SELECT * FROM xkm_server_1065.role_shouchonglibao;
+INSERT IGNORE INTO xkm_server_1064.role_shouji_zhuangbei_new SELECT * FROM xkm_server_1065.role_shouji_zhuangbei_new;
+INSERT IGNORE INTO xkm_server_1064.role_sj_zhenfa SELECT * FROM xkm_server_1065.role_sj_zhenfa;
+INSERT IGNORE INTO xkm_server_1064.role_skill SELECT * FROM xkm_server_1065.role_skill;
+INSERT IGNORE INTO xkm_server_1064.role_skill_cd SELECT * FROM xkm_server_1065.role_skill_cd;
+INSERT IGNORE INTO xkm_server_1064.role_stage SELECT * FROM xkm_server_1065.role_stage;
+INSERT IGNORE INTO xkm_server_1064.role_stat SELECT * FROM xkm_server_1065.role_stat;
+INSERT IGNORE INTO xkm_server_1064.role_survey_reward SELECT * FROM xkm_server_1065.role_survey_reward;
+INSERT IGNORE INTO xkm_server_1064.role_task SELECT * FROM xkm_server_1065.role_task;
+INSERT IGNORE INTO xkm_server_1064.role_task_data SELECT * FROM xkm_server_1065.role_task_data;
+INSERT IGNORE INTO xkm_server_1064.role_teamfuben SELECT * FROM xkm_server_1065.role_teamfuben;
+INSERT IGNORE INTO xkm_server_1064.role_tianming SELECT * FROM xkm_server_1065.role_tianming;
+INSERT IGNORE INTO xkm_server_1064.role_tianmingbag SELECT * FROM xkm_server_1065.role_tianmingbag;
+INSERT IGNORE INTO xkm_server_1064.role_touxian SELECT * FROM xkm_server_1065.role_touxian;
+INSERT IGNORE INTO xkm_server_1064.role_tujian SELECT * FROM xkm_server_1065.role_tujian;
+INSERT IGNORE INTO xkm_server_1064.role_tujian_fuben SELECT * FROM xkm_server_1065.role_tujian_fuben;
+INSERT IGNORE INTO xkm_server_1064.role_tujian_gongming SELECT * FROM xkm_server_1065.role_tujian_gongming;
+INSERT IGNORE INTO xkm_server_1064.role_tujianta SELECT * FROM xkm_server_1065.role_tujianta;
+INSERT IGNORE INTO xkm_server_1064.role_vip SELECT * FROM xkm_server_1065.role_vip;
+INSERT IGNORE INTO xkm_server_1064.role_vipmarket SELECT * FROM xkm_server_1065.role_vipmarket;
+INSERT IGNORE INTO xkm_server_1064.role_wangzhe_pvp SELECT * FROM xkm_server_1065.role_wangzhe_pvp;
+INSERT IGNORE INTO xkm_server_1064.role_xiake_token SELECT * FROM xkm_server_1065.role_xiake_token;
+INSERT IGNORE INTO xkm_server_1064.role_xiangoulibao SELECT * FROM xkm_server_1065.role_xiangoulibao;
+INSERT IGNORE INTO xkm_server_1064.role_xianshiqiang SELECT * FROM xkm_server_1065.role_xianshiqiang;
+INSERT IGNORE INTO xkm_server_1064.role_xiao_game SELECT * FROM xkm_server_1065.role_xiao_game;
+INSERT IGNORE INTO xkm_server_1064.role_xilian SELECT * FROM xkm_server_1065.role_xilian;
+INSERT IGNORE INTO xkm_server_1064.role_xingyunfanpai SELECT * FROM xkm_server_1065.role_xingyunfanpai;
+INSERT IGNORE INTO xkm_server_1064.role_xishu SELECT * FROM xkm_server_1065.role_xishu;
+INSERT IGNORE INTO xkm_server_1064.role_xuanshang SELECT * FROM xkm_server_1065.role_xuanshang;
+INSERT IGNORE INTO xkm_server_1064.role_xueba SELECT * FROM xkm_server_1065.role_xueba;
+INSERT IGNORE INTO xkm_server_1064.role_xunbao_bag SELECT * FROM xkm_server_1065.role_xunbao_bag;
+INSERT IGNORE INTO xkm_server_1064.role_yaoyi SELECT * FROM xkm_server_1065.role_yaoyi;
+INSERT IGNORE INTO xkm_server_1064.role_yaoyi_gongming SELECT * FROM xkm_server_1065.role_yaoyi_gongming;
+INSERT IGNORE INTO xkm_server_1064.role_yiyuanqianggou SELECT * FROM xkm_server_1065.role_yiyuanqianggou;
+INSERT IGNORE INTO xkm_server_1064.role_zhanduipvp SELECT * FROM xkm_server_1065.role_zhanduipvp;
+INSERT IGNORE INTO xkm_server_1064.role_zhanzhuang SELECT * FROM xkm_server_1065.role_zhanzhuang;
+INSERT IGNORE INTO xkm_server_1064.role_zhaocaimao SELECT * FROM xkm_server_1065.role_zhaocaimao;
+INSERT IGNORE INTO xkm_server_1064.role_zhigoulibao SELECT * FROM xkm_server_1065.role_zhigoulibao;
+INSERT IGNORE INTO xkm_server_1064.role_zhuansheng SELECT * FROM xkm_server_1065.role_zhuansheng;
+INSERT IGNORE INTO xkm_server_1064.role_zhuanshu SELECT * FROM xkm_server_1065.role_zhuanshu;
+INSERT IGNORE INTO xkm_server_1064.role_zhuoyue_equip SELECT * FROM xkm_server_1065.role_zhuoyue_equip;
+INSERT IGNORE INTO xkm_server_1064.server_data SELECT * FROM xkm_server_1065.server_data;
+INSERT IGNORE INTO xkm_server_1064.server_info SELECT * FROM xkm_server_1065.server_info;
+INSERT IGNORE INTO xkm_server_1064.server_recorde SELECT * FROM xkm_server_1065.server_recorde;
+INSERT IGNORE INTO xkm_server_1064.shanggushilian_first_tongguan_record SELECT * FROM xkm_server_1065.shanggushilian_first_tongguan_record;
+INSERT IGNORE INTO xkm_server_1064.shouchongfanbei SELECT * FROM xkm_server_1065.shouchongfanbei;
+INSERT IGNORE INTO xkm_server_1064.social_share_gift SELECT * FROM xkm_server_1065.social_share_gift;
+INSERT IGNORE INTO xkm_server_1064.special_activity SELECT * FROM xkm_server_1065.special_activity;
+INSERT IGNORE INTO xkm_server_1064.sub_role_info SELECT * FROM xkm_server_1065.sub_role_info;
+INSERT IGNORE INTO xkm_server_1064.system_mail SELECT * FROM xkm_server_1065.system_mail;
+INSERT IGNORE INTO xkm_server_1064.user SELECT * FROM xkm_server_1065.user;
+INSERT IGNORE INTO xkm_server_1064.wenhuangzhen_boss_refresh SELECT * FROM xkm_server_1065.wenhuangzhen_boss_refresh;
+INSERT IGNORE INTO xkm_server_1064.world_drop_goods SELECT * FROM xkm_server_1065.world_drop_goods;
+INSERT IGNORE INTO xkm_server_1064.wujinshenyuan_first_tongguan_record SELECT * FROM xkm_server_1065.wujinshenyuan_first_tongguan_record;
+INSERT IGNORE INTO xkm_server_1064.wulinhuanjing SELECT * FROM xkm_server_1065.wulinhuanjing;
+INSERT IGNORE INTO xkm_server_1064.xilian_part_attribute SELECT * FROM xkm_server_1065.xilian_part_attribute;
+INSERT IGNORE INTO xkm_server_1064.yuanshen_equip SELECT * FROM xkm_server_1065.yuanshen_equip;
+INSERT IGNORE INTO xkm_server_1064.zhouka_info SELECT * FROM xkm_server_1065.zhouka_info;
+
+UPDATE xkm_server_1064.role set server_id = 1064;
+
+UPDATE role r
+JOIN (
+    SELECT user_id, server_id, MAX(power) AS max_power
+    FROM role
+    GROUP BY user_id, server_id
+    HAVING COUNT(*) > 1
+) dup ON r.user_id = dup.user_id AND r.server_id = dup.server_id
+SET r.server_id = 99999
+WHERE r.power < dup.max_power;
+
+INSERT IGNORE INTO xkm_server_1064.system_mail (
+    mail_id,
+    title,
+    content,
+    receiver_ids,
+    attachment,
+    coin,
+    diamond,
+    exp,
+    valid_time,
+    add_time,
+    modify_time
+)
+SELECT 
+    mail_id,
+    title,
+    content,
+    receiver_ids,
+    attachment,
+    coin,
+    diamond,
+    exp,
+    valid_time,
+    add_time,
+    modify_time
+FROM xkm_server_1065.system_mail;
+
+
+
+update web.`ny_log_giftcode` set server_id = 1064 WHERE server_id = 1065;

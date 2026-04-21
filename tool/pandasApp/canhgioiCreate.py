@@ -18,16 +18,16 @@ skill_replacements = {
     "LV4-SKILL2": "99080240",
     "LV5-SKILL2": "99080250",
     "LV6-SKILL2": "99080260",
-    "LV1-SKILL5": "99081100",
-    "LV2-SKILL5": "99081110",
-    "LV3-SKILL5": "99081120",
-    "LV4-SKILL5": "99081130",
-    "LV5-SKILL5": "99081140",
-    "LV6-SKILL5": "99081150",
-    "LV7-SKILL5": "99081160",
-    "LV8-SKILL5": "99081170",
-    "LV9-SKILL5": "99081180",
-    "LV10-SKILL5": "99081190",  # Đảm bảo LV10-SKILL5 có trong danh sách thay thế
+    "LV1-SKILL5": "99081900",
+    "LV2-SKILL5": "99081910",
+    "LV3-SKILL5": "99081920",
+    "LV4-SKILL5": "99081930",
+    "LV5-SKILL5": "99081940",
+    "LV6-SKILL5": "99081950",
+    "LV7-SKILL5": "99081960",
+    "LV8-SKILL5": "99081970",
+    "LV9-SKILL5": "99081980",
+    "LV10-SKILL5": "99081990",  # Đảm bảo LV10-SKILL5 có trong danh sách thay thế
 }
 
 # Gọi hàm và in kết quả

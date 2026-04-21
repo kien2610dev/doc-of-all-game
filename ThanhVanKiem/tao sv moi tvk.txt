@@ -1,0 +1,17 @@
+Hướng dẫn mở thêm sv thanh vân kiếm:
+1. tạo thêm thư mục server và giải nén bộ data config của server vào thư mục vừa tạo: C:\Users\Administrator\Desktop\server\sv_template.rar
+2. thay đổi các config:
+- file folder server/config/local.xml dòng 14. thay đổi thành số server id của server mới
+- file folder server/config/serverconfig/commonconfig.xml
+ctrl + h -> thay xx_s4 bằng db của server mới. ví dụ s5 thì replace thành xx_s5
+ctrl + h -> thay port 11405 thành port của server mới, ví dụ s5 11405 -> 11505
+thay port ở các dòng 179, 182, 185, 189
+- file folder server/debug/serverconfig.xml đổi port ở các dòng: 28,43
+- trong folder server/debug/ đổi tên các file EXEcrossserver_debug4, EXEdataaccess_debug4, EXEgameworld_debug4, EXEgateway_debug4, EXEloginserver_debug4 -> đổi số 4 thành số server id mới
+- file folder server/debug/start_server.bat đổi tên các file được chạy trong này giống với tên các file vừa đổi
+- file folder server/debug/stop_server.bat đổi tên các file được chạy trong này giống với tên các file vừa đổi
+3. Tạo DB
+- Tạo DB mới cho server mới ví dụ s5 là xx_s5 sau đó chạy file ở C:\TVK3D\sql\xx_s1emty.sql
+4. Vào DB account, table ty_server kiểm tra xem đã có thông tin của server mới chưa, nếu chưa thì tạo tương tự như các thông tin mẫu
+5. Vào DB web, table ny_server kiểm tra xem đã có thông tin của server mới chưa, nếu chưa thì tạo tương tự như các thông tin mẫu
+6. tạo shortcut để khởi động nhanh/tắt nhanh máy chủ trong C:\TVK3D

@@ -1,0 +1,192 @@
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+※                                                                                             ※
+※ Mã nguồn này đã được tôi kiểm tra và có thể cài đặt, tất cả file và hướng dẫn sẽ được đóng gói phát hành ※
+※                                                                                             ※
+※ Nếu bạn không cài đặt được, xin lỗi, vấn đề không phải do tài nguyên mà hãy tự kiểm tra lại xem có thao tác thiếu hay chưa chỉnh sửa gì không ※
+※                                                                                             ※
+※ Lưu ý: Trước khi cài đặt bất cứ thứ gì trên máy chủ, hãy đảm bảo đã cài đặt môi trường cần thiết, tắt tường lửa và mở toàn bộ cổng ※
+※                                                                                             ※
+※ Toàn bộ hướng dẫn và tài nguyên chỉ dành cho nghiên cứu học tập trên máy đơn, xin đừng sử dụng vào mục đích thương mại ※
+※                                                                                             ※
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+Tham khảo cách tắt tường lửa và mở toàn bộ cổng: https://www.lyzwlkj.vip/185/hybk/
+
+Hướng dẫn dựng server Linux bản đầy đủ hỗ trợ đa máy chủ nạp tiền nền tảng H5 - Cửu Châu Dụ
+
+Hệ thống demo: CentOS 7.6
+
+Địa chỉ demo: 122.51.27.223
+
+=============================================================================================
+
+Cài đặt BT Panel (BaoTa):
+
+if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec
+
+Khi gặp nhắc nhở: Nhập chữ y viết thường và nhấn Enter để xác nhận cài đặt
+
+Tắt xác thực SSL: bt 26
+
+Xem địa chỉ mới của bảng điều khiển: bt 14
+
+Môi trường cần cài đặt:
+
+Nginx 1.20
+MySQL 5.7
+PHP 5.6【Cài mở rộng Memcache -- Tắt hàm -- Xóa system -- Reload cấu hình -- Khởi động lại】
+PHP 5.3【Cài mở rộng Memcache】
+PHP 7.2【Cài mở rộng Memcached】
+
+=============================================================================================
+
+Mở cổng toàn bộ trên BaoTa: 1-65535
+
+Tắt tường lửa:
+
+systemctl stop firewalld
+systemctl disable firewalld
+
+=============================================================================================
+
+Tải file “nagabegja.zip” lên thư mục gốc server “/”
+
+Giải nén:
+
+cd / && unzip nagabegja.zip
+
+Lưu ý: Trước khi giải nén cần đảm bảo đã cài đặt thành công Nginx!
+
+Khởi động lại Nginx:
+
+/etc/init.d/nginx restart
+
+Cấp quyền 777:
+
+chmod -R 777 /data
+
+=============================================================================================
+
+Cài đặt môi trường chạy:
+
+cd /data && tar -xvf otp_src_19.1.tar.gz
+
+yum install -y screen
+
+Thêm cấu hình mở rộng PHP:
+
+echo "extension = peb.so" >> /www/server/php/53/etc/php.ini
+
+Khởi động lại PHP:
+
+/etc/init.d/php-fpm-53 restart
+
+=============================================================================================
+
+Sửa IP máy chủ: // Đổi “122.51.27.223”
+
+Sử dụng lệnh một dòng để sửa:
+
+sed -i "s/103.78.0.22/192.168.1.201/g" `grep 103.78.0.22 -rl /data`
+
+mv /data/web/regcnyyhx.suyougame.cn/logs/node/103.78.0.22.cfg /data/web/regcnyyhx.suyougame.cn/logs/node/192.168.1.201.cfg
+
+Các file cụ thể cần chỉnh sửa: ★★★ Bạn có thể chọn sửa thủ công thay vì dùng lệnh trên ★★★
+
+/data/web/cdn/admin/main,php
+/data/web/cdn/Agent/main.php
+/data/web/cdn/shenhai1/platform/config_jzy_sh921_test_PM002704.cfg
+/data/web/game_server/1/config/security.php
+/data/web/regcnyyhx.suyougame.cn/logs/game.cfg.php
+/data/web/regcnyyhx.suyougame.cn/logs/server.cfg.php
+/data/web/regcnyyhx.suyougame.cn/logs/node/122.51.27.223.cfg【đổi tên file thành IP của bạn】
+/data/web/www/logo.php
+/data/web/www/h5plat/epayapi.php
+/data/web/www/h5plat/play/package_code/P0006471.php
+/data/web/www/package/validate.php
+/data/sql/jzy_registercn.sql
+/data/web/www/html/h5/P0006471.php
+/data/web/cdn/shenhai1/resource/index.php
+/data/web/cdn/shenhai1/index.php
+/data/baseweb/game/main/play.php
+/data/baseweb/api/game/utils.php
+=============================================================================================
+
+Đổi mật khẩu MySQL thành: 123456
+
+Chỉnh sửa cấu hình file:
+
+BT Panel -- Cửa hàng phần mềm -- Đã cài đặt -- MySQL 5.7 -- Sửa cấu hình -- thay dòng 25 và 26:
+
+sql-mode=NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+lower_case_table_names = 1
+
+Reload cấu hình -- Khởi động lại MySQL
+
+Import database:
+
+cd /data && ./sk
+
+=============================================================================================
+
+Khởi động máy chủ liên máy:
+
+cd /data/game_kf/script && sh start.sh
+
+Khởi động server khu vực 1:
+ví dụ như từ s1 game mở dc 4 ngày thì mình sẽ gõ thêm lệnh kia
+sudo date -s "+4 days"
+
+cd /data/game_s1/script && sh start.sh
+
+cd /data/game_s2/script && sh start.sh
+
+Sau khi khởi động có thể dùng lệnh: netstat -lntp để kiểm tra cổng
+
+Tắt máy chủ:
+
+cd /data && sh stop.sh
+
+Tắt cưỡng bức:
+
+killall beam.smp
+
+=============================================================================================
+
+Link game: http://192.168.1.100:81
+
+Đổi IP client Android đơn giản: // Đổi “122.51.27.223”
+
+ ssets pps\H564D19F0\www\manifest.json
+
+Trang quản trị vận hành:
+http://192.168.1.100:82/syadmin
+Tài khoản: admin
+Mật khẩu: 123456
+
+Trang GM cấp quyền:
+http://192.168.1.100:88/gm/gm.php
+Mã GM: lyzwlkj.vip
+
+Trang người chơi:
+http://192.168.1.100:88/gm
+
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+Trang chủ mã nguồn AZE: www.lyzwlkj.vip
+
+Nhóm QQ trao đổi chính thức 1: 620517548 (đã đầy)
+Nhóm QQ trao đổi chính thức 2: 715363640 (đã đầy)
+Nhóm QQ trao đổi chính thức 3: 1045932367
+Nhóm QQ VIP trọn đời: 720209672 (chỉ dành cho người dùng VIP trọn đời)
+
+VIP trọn đời có thể tải toàn bộ tài nguyên trên site và được giảm giá đặc biệt khi mua tài nguyên hiếm
+
+Mật khẩu giải nén mặc định: www.lyzwlkj.vip
+
+Phần mềm & công cụ môi trường thường dùng: https://www.lyzwlkj.vip/rjgj/djrj/
+
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+Mã nguồn chỉ dành cho nghiên cứu và học tập!!!
+Xin đừng sử dụng cho mục đích thương mại, nếu xảy ra tranh chấp mọi trách nhiệm sẽ không thuộc về tôi hoặc trang web này!!!
